@@ -1,0 +1,46 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 1.5vw 2vw 2vw;
+  font-weight: 700;
+  overflow-y: hidden;
+}
+
+a {
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+a:visited, a:focus, a:active, a:link {
+  text-decoration: none;
+  outline: 0;
+}
+
+h1, h2, h3, h4 {
+  margin: 0 0 1vw;
+  font-weight: 700;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+@font-face {
+  font-family: 'Bangers';
+  src: url("../fonts/Bangers/bangers-regular-webfont.woff2"), format("woff2");
+  src: url("../fonts/Bangers/bangers-regular-webfont.woff"), format("woff");
+  src: url("../fonts/Bangers/Bangers-Regular.ttf"), format("truetype");
+}
+
+@font-face {
+  font-family: 'Komika-hand';
+  src: url("../fonts/Komika-hand/komika_hand-webfont.woff2"), format("woff2");
+  src: url("../fonts/Komika-hand/komika_hand-webfont.woff"), format("woff");
+  src: url("../fonts/Komika-hand/Komika_Hand.ttf"), format("truetype");
+}

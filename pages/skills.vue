@@ -1,0 +1,101 @@
+<template lang="fr">
+  <div class="container-skills">
+      <section class="grid">
+          <figure>
+          </figure>
+          <figure>
+          </figure>
+          <figure>
+          </figure>
+          <figure>
+          </figure>
+          <figure>
+          </figure>
+          <figure>
+          </figure>
+          <figure>
+          </figure>
+          <figure>
+          </figure>
+      </section>
+  </div>
+</template>
+<style>
+
+    /*:root {
+        --gutter: 0.7vw;
+        --border: 0.3vw;
+    }
+    body {
+        margin: 2em;
+        height: 100%;
+
+    }
+    .container {
+        background-color: #D81F25;
+        width: calc(100% - 6em - 2*var(--border));
+        padding: 100px  0 100px 100px ;
+        height: calc(100vh - 17em - var(--border));
+        border: var(--border) solid black;
+        
+    }
+    .grid {
+        display: grid;
+        height: 100%;
+        width: 50%;
+        grid-template-columns: 1fr 0.13fr 0.13fr 0.8fr 0.8fr;
+        grid-template-rows: 1fr 0.4fr 0.8fr;
+        grid-gap: 0.7vw;
+    }
+    .grid figure {
+        margin: 0;
+        background-color: white;
+        border: var(--border) solid black;
+    }
+
+    .grid figure:nth-child(1) {
+        grid-column: 1 / 4;
+        grid-row: 1 / 2;
+    
+    }
+    .grid figure:nth-child(2) {
+        grid-column: 4 / 5;
+        grid-row: 1 / 2;
+    
+    }
+    .grid figure:nth-child(3) {
+        grid-column: 5 / 5;
+        grid-row: 1 / 2;
+    
+    }
+    .grid figure:nth-child(4) {
+        grid-column: 1 / 3;
+        grid-row: 2 / 3;
+    
+    }
+    .grid figure:nth-child(5) {
+        grid-column: 3 / 5;
+        grid-row: 2 / 3;
+    
+    }
+    .grid figure:nth-child(6) {
+        grid-column: 1 / 2;
+        grid-row: 3 / 3;
+    
+    }
+    .grid figure:nth-child(7) {
+        grid-column: 2 / 5;
+        grid-row: 3 / 3;
+    
+    }
+    .grid figure:nth-child(8) {
+        grid-column: 5 / 5;
+        grid-row: 2 / 4;
+    
+    }*/
+</style>
+<script>
+  export default {
+    name: "SkillsPage",
+  };
+</script>

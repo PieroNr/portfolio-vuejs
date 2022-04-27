@@ -1,0 +1,29 @@
+:root {
+    --border: 0.3vw;
+}
+
+.container-projects {
+    width: calc(100%);
+    height: calc(100vh - 4em - 2*var(--border));
+    border: var(--border) solid black;
+    display: flex;
+    justify-content: flex-end;
+
+    .container-flex{
+        width: 40%;
+        display: flex;
+        justify-content: flex-end;
+
+        .project {
+            border-left: var(--border) solid black;
+            width: calc(100% / 5);
+            text-align: -webkit-center;
+
+            h3 {
+                writing-mode: vertical-rl;
+                text-orientation: upright;
+            }
+        }
+    }
+}
+
