@@ -38,10 +38,10 @@ ul {
   src: url("../fonts/Bangers/Bangers-Regular.ttf"), format("truetype");
 }
 @font-face {
-  font-family: "Komika-hand";
-  src: url("../fonts/Komika-hand/komika_hand-webfont.woff2"), format("woff2");
-  src: url("../fonts/Komika-hand/komika_hand-webfont.woff"), format("woff");
-  src: url("../fonts/Komika-hand/Komika_Hand.ttf"), format("truetype");
+  font-family: "Komika Hand";
+  src: url("../fonts/Komika-hand/komika_hand.woff2"), format("woff2");
+  src: url("../fonts/Komika-hand/komika_hand.woff"), format("woff");
+  src: url("../fonts/Komika-hand/komika_hand.ttf"), format("truetype");
 }
 .wrapper-accueil .grid {
   position: relative;
@@ -374,15 +374,6 @@ ul {
           flex-grow: 1;
   overflow: hidden;
 }
-.wrapper-accueil .grid figure div img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-  will-change: transform;
-}
 .wrapper-accueil .grid figure:nth-child(1) {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
@@ -436,12 +427,12 @@ ul {
   display: block;
 }
 .wrapper-accueil .grid figure:nth-child(2) .background .text h2 span:nth-child(1) {
-  font-size: 125px;
-  line-height: 125px;
+  font-size: 5vw;
+  line-height: 5vw;
 }
 .wrapper-accueil .grid figure:nth-child(2) .background .text h2 span:nth-child(2) {
-  font-size: 97px;
-  line-height: 97px;
+  font-size: 4vw;
+  line-height: 4vw;
 }
 .wrapper-accueil .grid figure:nth-child(3) {
   -ms-grid-column: 2;
@@ -453,12 +444,44 @@ ul {
   -webkit-clip-path: polygon(0px 0px, 100% 0%, 100% 78%, 73% 78%, 73% 100%, 0% 100%);
           clip-path: polygon(0px 0px, 100% 0%, 100% 78%, 73% 78%, 73% 100%, 0% 100%);
 }
-.wrapper-accueil .grid figure:nth-child(3) div {
+.wrapper-accueil .grid figure:nth-child(3) div.fig-content {
   background: url("../svg/total-pattern-1.svg"), #0171B9;
   background-size: 130%;
   background-position: left;
   -webkit-clip-path: polygon(0.4vw 0.4vw, calc(100% - 0.4vw) 0.4vw, calc(100% - 0.4vw) calc(78% - 0.4vw), calc(73% - 0.4vw) calc(78% - 0.4vw), calc(73% - 0.4vw) calc(100% - 0.4vw), 0.4vw calc(100% - 0.4vw));
           clip-path: polygon(0.4vw 0.4vw, calc(100% - 0.4vw) 0.4vw, calc(100% - 0.4vw) calc(78% - 0.4vw), calc(73% - 0.4vw) calc(78% - 0.4vw), calc(73% - 0.4vw) calc(100% - 0.4vw), 0.4vw calc(100% - 0.4vw));
+}
+.wrapper-accueil .grid figure:nth-child(3) div.fig-content div {
+  position: relative;
+  text-align: center;
+}
+.wrapper-accueil .grid figure:nth-child(3) div.fig-content div p {
+  font-family: "Komika Hand", sans-serif;
+  width: 60%;
+  position: absolute;
+  top: 43%;
+  left: 53%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 1vw;
+}
+.wrapper-accueil .grid figure:nth-child(3) div.fig-content img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  will-change: transform;
+}
+.wrapper-accueil .grid figure:nth-child(3) div.fig-content .cell-img__bubble {
+  height: 85%;
+}
+.wrapper-accueil .grid figure:nth-child(3) div.fig-content .cell-img__woman {
+  height: 80%;
+  position: fixed;
+  bottom: 0px;
+  -webkit-transform: translate(-47%, 0px);
+          transform: translate(-47%, 0px);
+  z-index: 2;
 }
 .wrapper-accueil .grid figure:nth-child(4) {
   -ms-grid-column: 4;
@@ -473,6 +496,15 @@ ul {
   background-size: cover;
   background-position: center;
 }
+.wrapper-accueil .grid figure:nth-child(4) div img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  will-change: transform;
+}
 .wrapper-accueil .grid figure:nth-child(5) {
   -ms-grid-column: 2;
   grid-column: 2/2;
@@ -481,6 +513,15 @@ ul {
 }
 .wrapper-accueil .grid figure:nth-child(5) div {
   background-color: #E91E78;
+}
+.wrapper-accueil .grid figure:nth-child(5) div img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  will-change: transform;
 }
 .wrapper-accueil .grid figure:nth-child(6) {
   -ms-grid-column: 3;
@@ -496,6 +537,34 @@ ul {
   background-color: #22B170;
   -webkit-clip-path: polygon(0.4vw 0.4vw, calc(84% - 0.4vw) 0.4vw, calc(84% - 0.4vw) calc(39% + 0.4vw), calc(100% - 0.4vw) calc(39% + 0.4vw), calc(100% - 0.4vw) calc(100% - 0.4vw), 0.4vw calc(100% - 0.4vw));
           clip-path: polygon(0.4vw 0.4vw, calc(84% - 0.4vw) 0.4vw, calc(84% - 0.4vw) calc(39% + 0.4vw), calc(100% - 0.4vw) calc(39% + 0.4vw), calc(100% - 0.4vw) calc(100% - 0.4vw), 0.4vw calc(100% - 0.4vw));
+}
+.wrapper-accueil .grid figure:nth-child(6) div .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.wrapper-accueil .grid figure:nth-child(6) div .text h2 {
+  padding: 0 2vw;
+}
+.wrapper-accueil .grid figure:nth-child(6) div .text h2 span {
+  width: 96%;
+  font-family: "Bangers";
+  text-align: left;
+  text-shadow: 8px 5px 0px #00000063;
+  color: #FFFFFF;
+  font-weight: lighter;
+  margin: 0;
+  display: block;
+  font-size: 3.5vw;
+  line-height: 3.5vw;
 }
 .wrapper-accueil .grid figure:nth-child(7) {
   -ms-grid-column: 6;
@@ -523,6 +592,30 @@ ul {
   background-position: center;
   -webkit-clip-path: polygon(0.4vw 0.4vw, calc(100% - 0.4vw) 0.4vw, calc(100% - 0.4vw) calc(76% - 0.4vw), calc(87% - 0.4vw) calc(76% - 0.4vw), calc(87% - 0.4vw) calc(100% - 0.4vw), 0.4vw calc(100% - 0.4vw));
           clip-path: polygon(0.4vw 0.4vw, calc(100% - 0.4vw) 0.4vw, calc(100% - 0.4vw) calc(76% - 0.4vw), calc(87% - 0.4vw) calc(76% - 0.4vw), calc(87% - 0.4vw) calc(100% - 0.4vw), 0.4vw calc(100% - 0.4vw));
+}
+.wrapper-accueil .grid figure:nth-child(8) div h2 span {
+  width: 96%;
+  font-family: "Bangers";
+  text-align: center;
+  text-shadow: 8px 5px 0px #ffffff;
+  color: #000000;
+  font-weight: lighter;
+  margin-top: 2vw;
+  display: block;
+  font-size: 4vw;
+  line-height: 4vw;
+}
+.wrapper-accueil .grid figure:nth-child(8) div img {
+  width: 100%;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  position: fixed;
+  bottom: 0px;
+  will-change: transform;
 }
 .wrapper-accueil .grid figure:nth-child(9) {
   -ms-grid-column: 7;

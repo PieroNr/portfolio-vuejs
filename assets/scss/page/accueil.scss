@@ -38,13 +38,7 @@
                 flex-grow: 1;
                 overflow: hidden;
 
-                img{
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    transition: .2s;
-                    will-change: transform;
-                }
+                
             }
 
             &:nth-child(1) {
@@ -92,12 +86,12 @@
                                 margin: 0;
                                 display: block;
                                 &:nth-child(1){
-                                    font-size: 125px;
-                                    line-height: 125px;
+                                    font-size: 5vw;
+                                    line-height: 5vw;
                                 }
                                 &:nth-child(2){
-                                    font-size: 97px;
-                                    line-height: 97px;
+                                    font-size: 4vw;
+                                    line-height: 4vw;
                                 }
                             }
                         }
@@ -111,7 +105,7 @@
                 grid-column: 2 / 4;
                 grid-row: 3 / 6;
                 clip-path: polygon(0px 0px, 100% 0%, 100% 78%, 73% 78%, 73% 100%, 0% 100%);
-                div {
+                div.fig-content {
                     background: url('../svg/total-pattern-1.svg'), $blue;
                     background-size: 130%;
                     background-position: left;
@@ -124,6 +118,47 @@
                         calc(73% - #{$border_width}) calc(100% - #{$border_width}),
                         #{$border_width} calc(100% - #{$border_width})
                     );
+
+                    div {
+                        position: relative;
+                        text-align: center;
+                        
+
+                        p{
+                            font-family: $fontTexte;
+                            width: 60%;
+                            position: absolute;
+                            top: 43%;
+                            left: 53%;
+                            transform: translate(-50%, -50%);
+                            font-size: 1vw;
+                            
+                            
+                        }
+                    }
+
+                    img {
+                        object-fit: cover;
+                        transition: .2s;
+                        will-change: transform;
+                    }
+
+                    .cell-img{
+                        &__bubble{
+                            height: 85%;
+                            
+                        }
+                       &__woman {
+                            height: 80%;
+                            position: fixed;
+                            bottom: 0px;
+                            transform: translate(-47%, 0px);
+                            z-index: 2;
+                            
+                        }
+                        
+                    }
+                     
                 }
             }
 
@@ -135,6 +170,14 @@
                     background: url('../svg/black-pattern-1.svg'), $grey;
                     background-size: cover;
                     background-position: center;
+
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        transition: .2s;
+                        will-change: transform;
+                    }
                 }
             }
 
@@ -144,6 +187,13 @@
 
                 div {
                     background-color: $pink;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        transition: .2s;
+                        will-change: transform;
+                    }
                 }
             }
 
@@ -162,6 +212,28 @@
                         calc(100% - #{$border_width}) calc(100% - #{$border_width}),
                         #{$border_width} calc(100% - #{$border_width})
                     );
+
+                    .text{
+                        display: flex;
+                        width: 100%;
+                        justify-content: center;
+                        flex-direction: column;
+                        h2{
+                            padding: 0 2vw;
+                            span{
+                                width: 96%;
+                                font-family: $fontTitle;
+                                text-align: left;
+                                text-shadow: 8px 5px 0px #00000063;
+                                color: $white;
+                                font-weight: lighter;
+                                margin: 0;
+                                display: block;
+                                font-size: 3.5vw;
+                                line-height: 3.5vw;
+                            }
+                        }
+                    }
                 }
             }
 
@@ -191,6 +263,31 @@
                         calc(87% - #{$border_width}) calc(100% - #{$border_width}),
                         #{$border_width} calc(100% - #{$border_width})
                     );
+
+                    h2{
+                        span{
+                            width: 96%;
+                            font-family: $fontTitle;
+                            text-align: center;
+                            text-shadow: 8px 5px 0px #ffffff;
+                            color: $black;
+                            font-weight: lighter;
+                            margin-top: 2vw;
+                            display: block;
+                            font-size: 4vw;
+                            line-height: 4vw;
+                        }
+                    }
+
+                    img{
+                        width: 100%;
+                        object-position: center;
+                        object-fit: cover;
+                        transition: .2s;
+                        position: fixed;
+                        bottom: 0px;
+                        will-change: transform;
+                    }
                 }
             }
 

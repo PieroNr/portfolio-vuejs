@@ -37,8 +37,9 @@ ul {
 }
 
 @font-face {
-    font-family: 'Komika-hand';
-    src: url('../fonts/Komika-hand/komika_hand-webfont.woff2'), format("woff2");
-    src: url('../fonts/Komika-hand/komika_hand-webfont.woff'), format("woff");
-    src: url('../fonts/Komika-hand/Komika_Hand.ttf'), format("truetype");
-}
+    font-family: 'Komika Hand';
+    src: url('../fonts/Komika-hand/komika_hand.woff2'), format("woff2");
+    src: url('../fonts/Komika-hand/komika_hand.woff'), format("woff");
+    src: url('../fonts/Komika-hand/komika_hand.ttf'), format("truetype");
+} 
+

@@ -26,8 +26,12 @@
     </figure>
 
     <figure>
-      <div>
-        
+      <div class="fig-content">
+        <img class="cell-img__woman" src="../assets/svg/woman-glasses.svg" >
+        <div>
+          <img class="cell-img__bubble" src="../assets/svg/bubble-1.svg" >
+          <p>Passionné de web, de programmation,  de création et d’expériences digitales. J’aime prendre part à des projets toujours plus inovants et originals et je m’investis au maximum en tant que développeur fullstack. </p>
+        </div>
       </div>
       <!-- <figcaption>
         <div><div><h3>Starlord</h3></div></div>
@@ -36,7 +40,7 @@
     
      <figure>
       <div>
-        
+        <img src="../assets/svg/light-1.svg" >
       </div>
       <!-- <figcaption>
         <div><div><h3>Ms Marvel</h3></div></div>
@@ -54,7 +58,13 @@
 
     <figure>
       <div>
-        
+        <div class="text">
+          <h2>
+            <span> WEB DEVELOPER</span>
+            <span> DESIGNER</span>
+            <span> BASED IN PARIS, FR</span>
+          </h2>
+        </div>
       </div>
       <!-- <figcaption>
         <div><div><h3>Spider-Man</h3></div></div>
@@ -72,7 +82,12 @@
 
     <figure>
       <div>
-        
+        <div class="text">
+          <h2>
+            <span> LAST PROJECT :</span>
+          </h2>
+        </div>
+        <img src="../assets/svg/project-tablet.svg" >
       </div>
 
       <!-- <figcaption>

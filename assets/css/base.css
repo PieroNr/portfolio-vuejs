@@ -38,9 +38,11 @@ ul {
   src: url("../fonts/Bangers/Bangers-Regular.ttf"), format("truetype");
 }
 
-@font-face {
-  font-family: 'Komika-hand';
-  src: url("../fonts/Komika-hand/komika_hand-webfont.woff2"), format("woff2");
-  src: url("../fonts/Komika-hand/komika_hand-webfont.woff"), format("woff");
-  src: url("../fonts/Komika-hand/Komika_Hand.ttf"), format("truetype");
-}
+/* @font-face {
+  font-family: 'Komika Hand';
+  src: url("../fonts/Komika-hand/komika_hand.woff2"), format("woff2");
+  src: url("../fonts/Komika-hand/komika_hand.woff"), format("woff");
+  src: url("../fonts/Komika-hand/Komika_hand.ttf"), format("truetype");
+} */
+
+@font-face {font-family: "Komika Hand"; src: url("//db.onlinewebfonts.com/t/6cfb67ef1f525261e4707ea346cbe415.eot"); src: url("//db.onlinewebfonts.com/t/6cfb67ef1f525261e4707ea346cbe415.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/6cfb67ef1f525261e4707ea346cbe415.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/6cfb67ef1f525261e4707ea346cbe415.woff") format("woff"), url("//db.onlinewebfonts.com/t/6cfb67ef1f525261e4707ea346cbe415.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/6cfb67ef1f525261e4707ea346cbe415.svg#Komika Hand") format("svg"); }
