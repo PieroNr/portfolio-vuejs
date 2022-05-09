@@ -5,13 +5,12 @@
 }
 
 body {
-    margin: 1.5vw 2vw 2vw;
+    padding: 2vw;
     font-weight: 700;
     overflow-y: hidden;
 }
 
 a{
-    transition: .2s ease-in-out;
     &:visited, &:focus, &:active, &:link {
         text-decoration: none;
         outline: 0;
@@ -42,4 +41,26 @@ ul {
     src: url('../fonts/Komika-hand/komika_hand.woff'), format("woff");
     src: url('../fonts/Komika-hand/komika_hand.ttf'), format("truetype");
 } 
+
+
+.page-leave-active {
+    animation: translate-up .5s ease-in-out;
+}
+
+.page-enter-active{
+    animation: translate-up .5s  reverse;
+}
+.page-enter,
+.page-leave-to {
+    
+}
+
+@keyframes translate-up {
+    0% {
+      transform: translate(0,0);
+    }
+    100% {
+      transform: translate(0,-105%);
+    }
+  }
 
