@@ -7,7 +7,7 @@
 body {
     padding: 2vw;
     font-weight: 700;
-    overflow-y: hidden;
+    
 }
 
 a{
@@ -43,16 +43,12 @@ ul {
 } 
 
 
-.page-leave-active {
+/*.page-leave-active {
     animation: translate-up .5s ease-in-out;
 }
 
 .page-enter-active{
     animation: translate-up .5s  reverse;
-}
-.page-enter,
-.page-leave-to {
-    
 }
 
 @keyframes translate-up {
@@ -62,5 +58,104 @@ ul {
     100% {
       transform: translate(0,-105%);
     }
-  }
+  } */
 
+    /*.page-enter-active,
+    .page-leave-active {
+        position: absolute;
+        transition: all 0.85s ease-in-out;
+        transform-origin: 0% 0%;
+    }
+
+    .page-enter-from {
+        transform: rotateZ(-90deg);
+    }
+
+    .page-enter-to {       
+        transform: rotateZ(0deg);
+    }
+
+
+    .page-leave-from {
+        transform: rotateZ(0deg);
+    }
+
+
+    .page-leave-to {
+        transform: rotateZ(90deg);
+    }*/
+
+    /*.page-leave-active {
+        animation: move-down 1s ease-in-out;
+        transform-origin: 0% 0%;
+    }
+    
+    .page-enter-active{
+        animation: move-up 1s ease-in-out;
+        transform-origin: 0% 0%;
+    }
+
+    @keyframes move-down {
+        0% {
+            transform: rotateY(0deg);
+        }
+        100% {
+            transform: rotateY(180deg);
+        }
+      }
+
+      @keyframes move-up {
+        0% {
+            transform: rotateY(-180deg);
+        }
+        100% {
+            transform: rotateY(0deg);
+        }
+      }*/
+
+
+  .button-wrapper {
+    object-fit: none;
+    transition: none;
+    clip-path: none;
+    width: 10vw;
+    height: 3.5vw;           
+
+    a{
+        position: relative;
+        width: 100%;
+        padding-top: 25%;
+        display: block;
+        background-size: 100% 100%;
+        font-family: $fontTexte;
+        font-size: 1vw;
+        margin-bottom: 20px;
+        text-decoration: none;
+        color: #333;
+        
+        &.button {
+            background-image: url("../img/BTN-img2.webp");
+            &:after {
+                content: attr(title);
+                background-size: cover;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: block;
+                background-image: url("../img/BTN-img.webp");
+                transition: all 0.3s;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        
+            &:hover:after {
+                -webkit-transform: translate(2.5%, 10%);
+                transform: translate(2.5%, 10%);
+                color: black;
+            }
+        }
+    }
+}

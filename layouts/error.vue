@@ -9,15 +9,6 @@
   </div>
   </div>
 </template>
-<style>
-
-
-  @import '../assets/css/main.css';
-
-
-  
-</style>
-
 
 <script>
   export default {
@@ -41,3 +32,7 @@
 
   }
 </script>
+
+<style>
+  @import '../assets/css/main.css';
+</style>

@@ -21,22 +21,22 @@
     }
 }
 
-.about-container{
+.about-content{
     width: 100%;
     height: calc(100vh - 4vw);
     border: 0.4vw solid black;
     position: relative;
-    background: url('../svg/shapes-pattern.svg'),$green;
+    background: url($svgPathMin +'shapes-pattern.svg'),$green;
     background-size: 15%;
     background-position: center center;
-    .bubble-content{
+    &__bubble{
         position: fixed;
         transform: translate(10vw, 0);
         
         
         
     }
-    img.profil-img{
+    &__profil{
         position: fixed;
         object-fit: cover;
         transform: translate(-10%,10%);
@@ -47,51 +47,63 @@
     }
     
 
-    .about-content {
+    &__content {
         text-align: center;
         margin: 3vw auto;
         padding: 2vw;
         width: 60vw;
         overflow: hidden;
-        img{
-            width: 7vw;
-            border-radius: 100%;
-            position:relative;
-            
-        }
-        p {
-            font-family: $fontTexte;
-            margin-top: 2vw;
-            font-size: 1.5vw;
-            text-shadow: 1px 1px 0px #ffffff;
-        }
-        .contact-links{
-            margin-top: 2vw;
-            
-        }
-
-        a {
-            margin: 0 1vw;
-            font-family: $fontTitle;
-            font-weight: 100;
-            font-size: 2vw;
-            transition: all .8s cubic-bezier(0,0,.23,1);
-            text-decoration: none;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-image: linear-gradient(90deg,$red,$red 50%,#080808 0);
-            background-size: 200% 100%;
-            background-position: 100%;
-            cursor: pointer;
-            color: #080808;
-            text-align: left;
-            
-            letter-spacing: 2px;
-            &:hover {
-                background-position: 0;
-                color: $blue;
+        .content{
+            &-logo{
+                width: 7vw;
+                border-radius: 100%;
+                position:relative;
+                
             }
+            &-text{
+                p {
+                    font-family: $fontTexte;
+                    margin-top: 2vw;
+                    font-size: 1.5vw;
+                    text-shadow: 1px 1px 0px #ffffff;
+                }
+            }
+            
+            &-links{
+                margin-top: 2vw;
+                text-align: center;
+                text-align-last: center;
+
+                a {
+                    margin: 0 1vw;
+                    font-family: $fontTitle;
+                    font-weight: 100;
+                    font-size: 2vw;
+                    transition: all .8s cubic-bezier(0,0,.23,1);
+                    text-decoration: none;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-image: linear-gradient(90deg,$red,$red 50%,#080808 0);
+                    background-size: 200% 100%;
+                    background-position: 100%;
+                    cursor: pointer;
+                    color: #080808;
+                    text-align: left;
+                    letter-spacing: 2px;
+
+                    &:nth-last-child(1){
+                        display: block;
+                    }
+                    &:hover {
+                        background-position: 0;
+                        color: $blue;
+                    }
+                }
+            }
+    
+            
         }
+        
     }
     
 

@@ -15,7 +15,7 @@
             </div>
 
             <div class="project-image">
-                <img src="../assets/svg/montre.svg">
+                <img src="../assets/svg/min/montre.svg">
             </div>
         </div>
         <div class="projects-navigation">
@@ -35,13 +35,7 @@
   </div>
 </div>
 </template>
-<style>
-@import url('https://fonts.googleapis.com/css?family=Marvel:400,700');
 
-@import '../assets/css/main.css';
-
-    
-</style>
 <script>
   import menuToggle from '../components/menu-toggle.vue'
   export default {
@@ -52,5 +46,8 @@
     }
   };
 
-
 </script>
+
+<style>
+@import '../assets/css/main.css';
+</style>

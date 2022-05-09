@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="skills-content-grid__svg">
     <svg xmlns="http://www.w3.org/2000/svg" width="654" height="647" viewBox="0 0 654 647">
         <g fill="none" fill-rule="evenodd">
             <circle cx="326" cy="326" r="100" stroke="#FFF" stroke-opacity=".8" />

@@ -17,122 +17,6 @@
   </div>
 </template>
 
-<style>
-    .menu-button{
-        position:fixed;
-        background-color:transparent;
-        outline:none;
-        border:none;
-        border: 0;
-        padding: 0;
-        top: 58px;
-        left: 62px;
-        width: 33px;
-        height: 18px;
-        z-index: 2;
-        cursor: pointer;
-
-    }
-
-    .menu-bars{
-    display:flex;
-    flex-direction:column;
-}
-
-.bar1{
-  	background-color:#fff;
-    width: 16px;
-    height: 2px;
-    position: relative;
-    margin: 0 0 2px 0;
-    -webkit-transform-origin: center center;
-    transform-origin: center center;
-}
-
-.bar2{
-	  background-color:#fff;
-    width: 28px;
-    height: 2px;
-    position: relative;
-    margin: 2px 0;
-    -webkit-transform-origin: center center;
-            transform-origin: center center;
-}
-
-.bar3{
-	  background-color:#fff;
-    width: 16px;
-    height: 2px;
-    position: relative;
-    left: 16px;
-    margin: 2px 0 0 0;
-    -webkit-transform-origin: center center;
-            transform-origin: center center;
-}
-
-nav {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    position: fixed;
-    background-color: #D81F25;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    transform: translate3d(-100%, 0, 0);
-    z-index: 2;
-
-}
-
-nav section {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    position: fixed;
-}	
-
-.nav-link{
-    font-family: Bangers;
-    font-size: clamp(2.5rem, 2.2685rem + 1.2346vw, 3.75rem);
-    font-weight: 400;
-    color: black;
-    padding: 2vw 3vw;
-    background-color: white;
-    border: 5px black solid;
-    margin: 10px 0;
-}
-
-.skew {
-    -webkit-clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
-    -moz-clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
-    -ms-clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
-    -o-clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
-}
-
-
-.vertical {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    -moz-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    -ms-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    -o-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-}
-
-.skewback {
-    -webkit-clip-path: polygon(0 0, -100% 0, 100% 100%, 0 100%);
-    -moz-clip-path: polygon(0 0, -100% 0, 100% 100%, 0 100%);
-    -ms-clip-path: polygon(0 0, -100% 0, 100% 100%, 0 100%);
-    -o-clip-path: polygon(0 0, -100% 0, 100% 100%, 0 100%);
-    clip-path: polygon(0 0, -100% 0, 100% 100%, 0 100%);
-
-}
-</style>
 <script>
   import { gsap } from 'gsap';
   import $ from 'jquery';
@@ -141,6 +25,7 @@ nav section {
 
   export default { 
   name: "menuToggle",
+  transition: "page",
   mounted() { 
         var menuAnimation = new TimelineMax({paused:true});
         var menuAnimationBack = new TimelineMax({paused:true, reversed: true});
@@ -163,15 +48,15 @@ nav section {
         function mediaqueryresponse(mql){
             if (mqls[0].matches){
                 menuAnimation
-                .to(navMain, 0.8, {width: '100%', className : "+=vertical", ease: Power2.easeInOut, transform: "translate3d(0,0,0)"},0);
+                .to(navMain, 0.8, {width: '100vw', className : "+=vertical", ease: Power2.easeInOut, transform: "translate3d(0,0,0)"},0);
             }
             if (mqls[1].matches){
                 menuAnimation
-                .to(navMain, 0.8, {width: '100%', className : "+=vertical", ease: Power2.easeInOut, transform: "translate3d(0,0,0)"},0);
+                .to(navMain, 0.8, {width: '100vw', className : "+=vertical", ease: Power2.easeInOut, transform: "translate3d(0,0,0)"},0);
             }
             if (mqls[2].matches){
                 menuAnimation
-                .to(navMain, 0.8, {width: '100%', className : "+=vertical", ease: Power2.easeInOut, transform: "translate3d(0,0,0)"},0);
+                .to(navMain, 0.8, {width: '100vw', className : "+=vertical", ease: Power2.easeInOut, transform: "translate3d(0,0,0)"},0);
             }
         }
 
@@ -273,9 +158,12 @@ nav section {
         };
 
         hoverMouse($('.nav-link'));
-        hoverMouse($('.button-wrapper'));
         } 
 } 
 
   
 </script>
+
+<style>
+  @import '../assets/css/main.css';
+</style>

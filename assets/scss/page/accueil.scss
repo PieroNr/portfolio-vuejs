@@ -1,8 +1,10 @@
-.wrapper-accueil{
+
+.home-content{
     height: calc(100vh - 4vw);
     width: 170%;
-    overflow-x: visible;
-    .grid {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    .home-content-grid {
         position: relative;
         display: grid;
         height: 100%;
@@ -20,7 +22,7 @@
             display: flex;
             flex-direction: column;
 
-            div {
+            .cell-content {
                 vertical-align: middle;
                 width: 100%;
                 height: 100%;
@@ -46,12 +48,12 @@
                 grid-column: 1 / 2;
                 grid-row: 1 / 7;
 
-                div {
+                .cell-content {
                     position: relative;
-                    background: url('../svg/circle-pattern-1.svg'), $white;
+                    background: url($svgPathMin + 'circle-pattern-1.svg'), $white;
                     background-size: 130%;
                     background-position: bottom left;
-                    img{
+                    &__img{
                         width: 100%;
                         height: 100%;
                         object-fit: contain;
@@ -60,20 +62,22 @@
                         will-change: transform;
                     }
 
-                    p{
-                        font-family: $fontTitle;
-                        text-align: center;
-                        color: $black;
-                        font-weight: lighter;
-                        margin: 5vw;
-                        display: block;
-                        font-size: 7vw;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        transform: rotate(-30deg);
-
-                    }
+                    &__text{
+                        &.--bigt{
+                            font-family: $fontTitle;
+                            text-align: center;
+                            color: $black;
+                            font-weight: lighter;
+                            margin: 5vw;
+                            display: block;
+                            font-size: 7vw;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            transform: rotate(-30deg);
+    
+                        }
+                    } 
                 }
 
                 
@@ -83,7 +87,7 @@
                 grid-column: 2 / 6;
                 grid-row: 1 / 3;
                 clip-path: polygon(0 0, 100% 0, 100% 52%, 97% 52%, 97% 100%, 0% 100%);
-                .background {
+                .cell-content {
                     background-color: $red;
                     clip-path:
                     polygon(
@@ -95,13 +99,19 @@
                         #{$border_width} calc(100% - #{$border_width})
                     );
                     
-                    .text{
+                    &-textContent{
                         display: flex;
                         width: 100%;
+                        height: 100%;
                         justify-content: center;
                         flex-direction: column;
-                        h2{
+                                                
+                    }
+
+                    &__text{
+                        &.--titleFirst{
                             padding: 0 10px;
+                            margin: 0;
                             span{
                                 width: 96%;
                                 font-family: $fontTitle;
@@ -131,8 +141,8 @@
                 grid-column: 2 / 4;
                 grid-row: 3 / 6;
                 clip-path: polygon(0px 0px, 100% 0%, 100% 78%, 73% 78%, 73% 100%, 0% 100%);
-                div.fig-content {
-                    background: url('../svg/total-pattern-1.svg'), $blue;
+                .cell-content {
+                    background: url($svgPathMin + 'total-pattern-1.svg'), $blue;
                     background-size: 130%;
                     background-position: left;
                     clip-path:
@@ -145,10 +155,13 @@
                         #{$border_width} calc(100% - #{$border_width})
                     );
 
-                    div {
+                    &>div {
                         position: relative;
                         text-align: center;
-                        p{
+                    }
+
+                    &__text {
+                        &.--smallt{
                             font-family: $fontTexte;
                             width: 60%;
                             position: absolute;
@@ -157,26 +170,24 @@
                             transform: translate(-50%, -50%);
                             font-size: 1vw;
                         }
-
-                        .button-wrapper{
-                            position: absolute !important;
-                            top: 75%;
-                            left: 36%;
-                        }
                     }
 
-                    img {
+                    .button-wrapper{
+                        position: absolute !important;
+                        top: 75%;
+                        left: 36%;
+                    }
+                    
+
+                    &__img {
                         object-fit: cover;
                         transition: .2s;
                         will-change: transform;
-                    }
-
-                    .cell-img{
-                        &__bubble{
+                        &.--bubble{
                             height: 85%;
                             
                         }
-                       &__woman {
+                        &.--woman {
                             height: 80%;
                             position: fixed;
                             bottom: 0px;
@@ -184,7 +195,6 @@
                             z-index: 2;
                             
                         }
-                        
                     }
                      
                 }
@@ -194,12 +204,12 @@
                 grid-column: 4 / 5;
                 grid-row: 3 / 5;
 
-                div {
-                    background: url('../svg/black-pattern-1.svg'), $grey;
+                .cell-content {
+                    background: url($svgPathMin + 'black-pattern-1.svg'), $grey;
                     background-size: cover;
                     background-position: center;
 
-                    img{
+                    &__img{
                         width: 100%;
                         height: 100%;
                         object-fit: cover;
@@ -213,9 +223,9 @@
                 grid-column: 2 / 2;
                 grid-row: 6 / 6;
 
-                div {
+                .cell-content {
                     background-color: $pink;
-                    img{
+                    &__img{
                         width: 100%;
                         height: 100%;
                         object-fit: cover;
@@ -229,7 +239,7 @@
                 grid-column: 3 / 7;
                 grid-row: 5 / 7;
                 clip-path: polygon(0px 0px,84% 0%, 84% 39%, 100% 39%, 100% 100%, 0% 100%);
-                div{
+                .cell-content{
                     background-color: $green;
                     clip-path:
                     polygon(
@@ -241,24 +251,28 @@
                         #{$border_width} calc(100% - #{$border_width})
                     );
 
-                    .text{
+                    &-textContent{
                         display: flex;
                         width: 100%;
+                        height: 100%;
                         justify-content: center;
                         flex-direction: column;
-                        h2{
-                            padding: 0 2vw;
-                            span{
-                                width: 96%;
-                                font-family: $fontTitle;
-                                text-align: left;
-                                text-shadow: 8px 5px 0px #00000063;
-                                color: $white;
-                                font-weight: lighter;
+                        .cell-content__text{
+                            &.--titleSecond{
+                                padding: 0 2vw;
                                 margin: 0;
-                                display: block;
-                                font-size: 3.5vw;
-                                line-height: 3.5vw;
+                                span{
+                                    width: 96%;
+                                    font-family: $fontTitle;
+                                    text-align: left;
+                                    text-shadow: 8px 5px 0px #00000063;
+                                    color: $white;
+                                    font-weight: lighter;
+                                    margin: 0;
+                                    display: block;
+                                    font-size: 3.5vw;
+                                    line-height: 3.5vw;
+                                }
                             }
                         }
                     }
@@ -269,7 +283,7 @@
                 grid-column: 6 / 9;
                 grid-row: 1 / 1;
 
-                div {
+                .cell-content {
                     background-color: $white;
                 }
             }
@@ -278,8 +292,8 @@
                 grid-column: 5 / 9;
                 grid-row: 2 / 6;
                 clip-path: polygon(0px 0px, 100% 0%, 100% 76%, 87% 76%, 87% 100%, 0% 100%);
-                div{
-                    background: url('../svg/spirale-pattern-1.svg'), $yellow;
+                .cell-content{
+                    background: url($svgPathMin +'spirale-pattern-1.svg'), $yellow;
                     background-size: 130%;
                     background-position: center;
                     clip-path:
@@ -292,22 +306,25 @@
                         #{$border_width} calc(100% - #{$border_width})
                     );
 
-                    h2{
-                        span{
-                            width: 96%;
-                            font-family: $fontTitle;
-                            text-align: center;
-                            text-shadow: 8px 5px 0px #ffffff;
-                            color: $black;
-                            font-weight: lighter;
-                            margin-top: 2vw;
-                            display: block;
-                            font-size: 4vw;
-                            line-height: 4vw;
+                    .cell-content__text{
+                        &.--titleSecond{
+                            margin: 0;
+                            span{
+                                width: 96%;
+                                font-family: $fontTitle;
+                                text-align: center;
+                                text-shadow: 8px 5px 0px #ffffff;
+                                color: $black;
+                                font-weight: lighter;
+                                margin-top: 2vw;
+                                display: block;
+                                font-size: 4vw;
+                                line-height: 4vw;
+                            }
                         }
                     }
 
-                    img{
+                    &__img{
                         width: 100%;
                         object-position: center;
                         object-fit: cover;
@@ -323,7 +340,7 @@
                 grid-column: 7 / 7;
                 grid-row: 6 / 6;
 
-                div {
+                .cell-content {
                     background-color: $white;
                 }
             }
@@ -332,26 +349,28 @@
                 grid-column: 9 / 12;
                 grid-row: 1 / 3;
 
-                div {
+                .cell-content {
                     background-color: $pink;
 
-                    h3{
-                        span{
-                            width: 96%;
-                            font-family: $fontTitle;
-                            text-align: left;
-                            color: $white;
-                            text-shadow: 5px 5px 0px #00000063;
-                            font-weight: lighter;
-                            margin-top: 2vw;
-                            margin: 2vw;
-                            display: block;
-                            font-size: 2vw;
-                            line-height: 2vw;
+                    &__text{
+                        &.--titleThird{
+                            span{
+                                width: 96%;
+                                font-family: $fontTitle;
+                                text-align: left;
+                                color: $white;
+                                text-shadow: 5px 5px 0px #00000063;
+                                font-weight: lighter;
+                                margin-top: 2vw;
+                                margin: 2vw;
+                                display: block;
+                                font-size: 2vw;
+                                line-height: 2vw;
+                            }
                         }
-                    }
+                    } 
 
-                    img {
+                    &__img {
                         width: 15%;
                         margin: 0 0.5vw;
                     }
@@ -363,13 +382,13 @@
                 grid-row: 3 / 4;
                 position: relative;
 
-                div {
-                    background: url('../svg/flux-pattern-3.svg'), $grey;
+                .cell-content {
+                    background: url($svgPathMin +'flux-pattern-3.svg'), $grey;
                     background-size: 130%;
                     background-position: bottom left;
                     overflow: visible;
 
-                    img {
+                    &__img {
                         width: 100%;
                         height: 90%;
                         object-fit: center top;
@@ -382,7 +401,7 @@
                 grid-column: 11 / 13;
                 grid-row: 3 / 5;
 
-                div {
+                .cell-content {
                     background-color: $green;
                 }
             }
@@ -392,8 +411,8 @@
                 grid-row: 4 / 7;
                 clip-path: polygon(0px 0px, 40% 0%, 40% 20%, 100% 20%, 100% 100%, 0% 100%);
 
-                .text {
-                    background: url('../svg/flux-pattern-1.svg'), $blue;
+                .cell-content {
+                    background: url($svgPathMin +'flux-pattern-1.svg'), $blue;
                     background-size: cover;
                     background-position: center;
                     clip-path:
@@ -406,29 +425,32 @@
                         #{$border_width} calc(100% - #{$border_width})
                     );
 
-                    h2{
-                        font-family: $fontTitle;
-                        text-align: left;
-                        text-shadow: 8px 5px 0px #00000063;
-                        color: $white;
-                        font-weight: lighter;
-                        font-size: 2.5vw;
-                        line-height: 3.5vw;
-                        position: absolute;
-                        top: 2%;
-                        left: 3%;
-                    }
+                    &__text{
+                        &.--titleSecond{
+                            font-family: $fontTitle;
+                            text-align: left;
+                            text-shadow: 8px 5px 0px #00000063;
+                            color: $white;
+                            font-weight: lighter;
+                            font-size: 2.5vw;
+                            line-height: 3.5vw;
+                            position: absolute;
+                            top: 2%;
+                            left: 3%;
+                            margin: 0;
+                        }
 
-                    p{
-                        font-family: $fontTexte;
-                        width: 90%;
-                        position: absolute;
-                        top: 55%;
-                        left: 48%;
-                        transform: translate(-50%, -50%);
-                        font-size: 1vw;
-                        color: $white;
-                        font-weight: lighter;
+                        &.--smallt{
+                            font-family: $fontTexte;
+                            width: 90%;
+                            position: absolute;
+                            top: 55%;
+                            left: 48%;
+                            transform: translate(-50%, -50%);
+                            font-size: 1vw;
+                            color: $white;
+                            font-weight: lighter;
+                        }
                     }
 
                     .button-wrapper{
@@ -440,7 +462,7 @@
             }
         }
 
-        .copyright {
+        .home-content-grid__copyright {
             color: $main_color;
             text-transform: uppercase;
             position: absolute;
@@ -454,82 +476,105 @@
                 transform: rotate(90deg);
             }
         }
-
-        .button-wrapper {
-            object-fit: none;
-            transition: none;
-            clip-path: none;
-            width: 10vw;
-            height: 3.5vw;           
-
-            a{
-                position: relative;
-                width: 100%;
-                padding-top: 25%;
-                display: block;
-                background-size: 100% 100%;
-                font-family: $fontTexte;
-                font-size: 1vw;
-                margin-bottom: 20px;
-                text-decoration: none;
-                color: #333;
-                
-                &.button {
-                    background-image: url("../img/BTN-img2.png");
-                    &:after {
-                    content: attr(title);
-                        background-size: cover;
-                        width: 100%;
-                        height: 100%;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        display: block;
-                        background-image: url("../img/BTN-img.png");
-                        transition: all 0.3s;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                    }
-                
-                    &:hover:after {
-                        -webkit-transform: translate(2.5%, 10%);
-                        transform: translate(2.5%, 10%);
-                        color: black;
-                    }
-                }
-            }
-        }
-
-
         
-        @media (max-width: 600px) {
-
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 200px;
-            grid-auto-rows: 200px;
-
-            figure {
+        
+    }
+    @media (max-width: 1024px) {
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+        .home-content-grid{
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 100px;
+            grid-auto-rows:100px;
+            
+            &__cell {
                 grid-column: auto!important;
                 grid-row: auto!important;
                 clip-path: unset!important;
-                &:nth-child(2),
-                &:nth-child(8),
-                &:nth-child(9),
-                &:nth-child(10) {
-                    grid-row: auto / span 2 !important;
+                border: $border_width $black solid;
+                div{
+                    clip-path: unset!important;
+                }
+                &:nth-child(1){
+                    grid-column: 1 / 3 !important;
+                    grid-row: 1 / 5 !important;
                     width: auto;
                 }
+                &:nth-child(2){
+                    grid-column: 3 / 3 !important;
+                    grid-row: 1 / 6 !important;
+                    width: auto;
+                }
+                &:nth-child(3){
+                    grid-column: 2 / 4 !important;
+                    grid-row: 7 / 10 !important;
+                    width: auto;
+                }
+                &:nth-child(4){
+                    grid-column: 1 / 2 !important;
+                    grid-row: 7 / 10 !important;
+                    width: auto;
+                }
+                &:nth-child(5){
+                    grid-column: 3 / 3 !important;
+                    grid-row: 6 / 6 !important;
+                    width: auto;
+                }
+                &:nth-child(6){
+                    grid-column: 1 / 3 !important;
+                    grid-row: 5 / 7 !important;
+                    width: auto;
+                }
+                &:nth-child(7){
+                    grid-column: 1 / 3 !important;
+                    grid-row: 14 / 15 !important;
+                    width: auto;
+                }
+                &:nth-child(8){
+                    grid-column: 1 / 3 !important;
+                    grid-row: 10 / 15 !important;
+                    width: auto;
+                }
+                &:nth-child(9){
+                    grid-column: 3 / 3 !important;
+                    grid-row: 10 / 11 !important;
+                    width: auto;
+                }
+                &:nth-child(10){
+                    grid-column: 1 / 2 !important;
+                    grid-row: 15 / 18 !important;
+                    width: auto;
+                }
+                &:nth-child(11){
+                    grid-column: 2 / 3 !important;
+                    grid-row: 15 / 18 !important;
+                    width: auto;
+                }
+                &:nth-child(12){
+                    grid-column: 3 / 3 !important;
+                    grid-row: 15 / 18 !important;
+                    width: auto;
+                }
+                &:nth-child(13){
+                    grid-column: 3 / 3 !important;
+                    grid-row: 11 / 15 !important;
+                    width: auto;
+                }
+               
             }
-        }
-        
-        @media (max-width: 420px) {
+        } 
+    }
+    
+    @media (max-width: 420px) {
+        .home-content-grid{
             grid-template-columns: 1fr;
-            figure {
+            &__cell {
                 grid-column-end: div 1!important;
                 grid-row: auto!important;
             }
         }
+        
     }
 }
 

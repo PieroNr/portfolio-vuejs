@@ -1,20 +1,15 @@
 <template lang="fr">
-  <div class="skills">
+  <div class="container skills">
       <menuToggle />
-    <div class="wrapper-skills">
-        <section class="grid">
+    <div class="skills-content">
+        <section class="skills-content-grid">
             <SkillsWheel />
         </section>
-        <img src="../assets/svg/woman-helmet.svg">
+        <img class="skills-content__img" src="../assets/svg/min/woman-helmet.svg">
     </div>
   </div>
 </template>
-<style>
 
-    @import '../assets/css/main.css';
-
-    
-</style>
 <script>
   import menuToggle from '../components/menu-toggle.vue'
   import SkillsWheel from '../components/skills-wheel.vue'
@@ -27,6 +22,8 @@
 
     }
   };
-
-
 </script>
+
+<style>
+    @import '../assets/css/main.css';  
+</style>

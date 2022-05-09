@@ -1,57 +1,57 @@
 <template lang="fr">
-<div @wheel="horizontalScroll">
+<div class="container home" >
   <loading v-if="isLoading != 'false' "></loading>
   <menuToggle />
-  <div id="wrapper-accueil" class="wrapper-accueil"  ref="wrapper">
-  <section class="grid">
+  <div class="home-content" @wheel="horizontalScroll" ref="wrapper" >
+  <section class="home-content-grid">
 
-    <figure>
-      <div>
-        <img src="../assets/img/profil.png" >
-        <p>YOSH !</p>
+    <figure class="home-content-grid__cell">
+      <div class="cell-content">
+        <img class="cell-content__img" src="../assets/img/profil.webp" >
+        <span class="cell-content__text --bigt">YOSH !</span>
       </div>
     </figure>
 
-    <figure>
-      <div class="background">
-        <div class="text">
-          <h2>
+    <figure class="home-content-grid__cell">
+      <div class="cell-content" >
+        <div class="cell-content-textContent">
+          <h1 class="cell-content__text --titleFirst">
             <span> - DEVMAN - </span>
             <span> FULLSTACK DEVELOPER WEB </span>
-          </h2>
+          </h1>
         </div>
       </div>
     </figure>
 
-    <figure>
-      <div class="fig-content">
-        <img class="cell-img__woman" src="../assets/svg/woman-glasses.svg" >
+    <figure class="home-content-grid__cell">
+      <div class="cell-content">
+        <img class="cell-content__img --woman" src="../assets/svg/min/woman-glasses.svg" >
         <div>
-          <img class="cell-img__bubble" src="../assets/svg/bubble-1.svg" >
-          <p>Passionné de web, de programmation,  de création et d’expériences digitales. J’aime prendre part à des projets toujours plus inovants et originals et je m’investis au maximum en tant que développeur fullstack. </p>
+          <img class="cell-content__img --bubble" src="../assets/svg/min/bubble-1.svg" >
+          <p class="cell-content__text --smallt">Passionné de web, de programmation,  de création et d’expériences digitales. J’aime prendre part à des projets toujours plus inovants et originals et je m’investis au maximum en tant que développeur fullstack. </p>
           <div class="button-wrapper">
-            <a class="button" href="#" title="PROJECTS ->"></a>
+            <NuxtLink class="button" to="/projects" title="PROJECTS ->"></NuxtLink>
           </div>
         </div>
       </div>
     </figure>
     
-     <figure>
-      <div>
-        <img src="../assets/svg/light-1.svg" >
+     <figure class="home-content-grid__cell">
+      <div class="cell-content">
+        <img class="cell-content__img --light" src="../assets/svg/min/light-1.svg" >
       </div>
     </figure>
 
-    <figure>
-      <div>
-        <img src="../assets/svg/yeux.svg" >
+    <figure class="home-content-grid__cell">
+      <div class="cell-content">
+        <img class="cell-content__img --eye" src="../assets/svg/min/yeux.svg" >
       </div>
     </figure>
 
-    <figure>
-      <div>
-        <div class="text">
-          <h2>
+    <figure class="home-content-grid__cell">
+      <div class="cell-content">
+        <div class="cell-content-textContent">
+          <h2 class="cell-content__text --titleSecond">
             <span> WEB DEVELOPER</span>
             <span> DESIGNER</span>
             <span> BASED IN PARIS, FR</span>
@@ -60,67 +60,68 @@
       </div>
     </figure>
 
-    <figure>
-      <div>
+    <figure class="home-content-grid__cell">
+      <div class="cell-content">
       </div>
     </figure>
 
-    <figure>
-      <div>
-        <div class="text">
-          <h2>
+    <figure class="home-content-grid__cell">
+      <div class="cell-content">
+        <div class="cell-content-textContent">
+          <h2 class="cell-content__text --titleSecond">
             <span> LAST PROJECT :</span>
           </h2>
         </div>
-        <img src="../assets/svg/project-tablet.svg" >
+        <img class="cell-content__img --tabletProject" src="../assets/svg/min/project-tablet.svg" >
       </div>
     </figure>
 
-    <figure>
-      <div>
+    <figure class="home-content-grid__cell">
+      <div class="cell-content">
       </div>
     </figure>
   
-    <figure>
-      <div>
-          <h3>
+    <figure class="home-content-grid__cell">
+      <div class="cell-content">
+          <h3 class="cell-content__text --titleThird">
             <span>Contact:</span>
           </h3>
-          <img src="../assets/img/Instagram.png" >
-          <img src="../assets/img/Linkedin.png" > 
+          <a href="https://www.linkedin.com/in/piero-neri-39719b195/" target="_blank"><img class="cell-content__img --linkedin" src="../assets/img/Linkedin.png" > </a>
+          <a href="https://www.instagram.com/beastcartoondraft/?hl=fr" target="_blank"><img class="cell-content__img --instagram" src="../assets/img/Instagram.png" ></a>
+          
       </div>
     </figure>
 
-    <figure>
-      <div>
-        <img src="../assets/svg/phone.svg" >
+    <figure class="home-content-grid__cell">
+      <div class="cell-content">
+        <img class="cell-content__img --phone" src="../assets/svg/min/phone.svg" >
       </div>
     </figure>
 
-    <figure>
-      <div>  
+    <figure class="home-content-grid__cell">
+      <div class="cell-content">  
       </div>
     </figure>
 
-    <figure>
-      <div class="text">
-      <h2>
-        MULTIDISCIPLINAIRE
-      </h2>
-        <p>Etre polyvalent est une force dans le domaine du web, par 
+    <figure class="home-content-grid__cell">
+      <div class="cell-content">
+        <h2 class="cell-content__text --titleSecond">
+          MULTIDISCIPLINAIRE
+        </h2>
+        <p  class="cell-content__text --smallt">Etre polyvalent est une force dans le domaine du web, par 
         exemple pour faire face aux divers imprévus dans une 
         équipe. Aussi compétent côté front-end et back-end avec 
         une légère touche de création. Devman est le couteau 
         suisse des développeur ! </p>
         <div class="button-wrapper">
-          <a class="button" href="#" title="COMPÉTENCES ->"></a>
+          <NuxtLink class="button" to="/skills" title="COMPÉTENCES ->"></NuxtLink>
         </div>
       </div>        
     </figure>
     
   
     
-    <div class="copyright">2022 ZEENHO</div>
+    <div class="home-content-grid__copyright">2022 Piero NERI</div>
     
     
 
@@ -130,18 +131,10 @@
 </div>
 </template>
 
-
-<style>
-
-
-  @import '../assets/css/main.css';
-
-
-</style>
-
 <script>
   import menuToggle from '../components/menu-toggle.vue'
   import loading from '../components/loading.vue'
+  import $ from 'jquery';
   export default {
     name: "IndexPage",
     transition: "page",
@@ -168,8 +161,12 @@
     methods: {
       horizontalScroll(e){
         
-        this.$refs.wrapper.scrollLeft += e.deltaY;
+        $('body').scrollLeft += e.deltaY;
       }
     },
   };
 </script>
+
+<style>
+  @import '../assets/css/main.css';
+</style>

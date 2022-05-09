@@ -6,7 +6,8 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "dev:host": "nuxt --hostname 0.0.0.0 --port 3000"
   },
   "dependencies": {
     "@types/greensock": "^1.15.32",

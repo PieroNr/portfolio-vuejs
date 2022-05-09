@@ -2,7 +2,7 @@
     width: 100%;
     height: calc(100vh - 4vw);
     border: 0.4vw solid black;
-    background: url('../svg/circle-pattern-1.svg');
+    background: url($svgPathMin +'circle-pattern-1.svg');
     background-size: 80%;
     background-position: center;
     background-repeat: no-repeat;
