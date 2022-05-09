@@ -132,41 +132,39 @@
 </template>
 
 <script>
-  import menuToggle from '../components/menu-toggle.vue'
-  import loading from '../components/loading.vue'
-  import $ from 'jquery';
-  export default {
-    name: "IndexPage",
-    transition: "page",
-    data() {
-      return {
-        isLoading: sessionStorage.getItem('loading')
-      };
-    },
-    components: {
-        menuToggle,
-        loading,
-    },
+import menuToggle from "../components/menu-toggle.vue";
+import loading from "../components/loading.vue";
+import $ from "jquery";
+export default {
+  name: "IndexPage",
+  transition: "page",
+  data() {
+    return {
+      isLoading: sessionStorage.getItem("loading"),
+    };
+  },
+  components: {
+    menuToggle,
+    loading,
+  },
 
-    mounted(){
-      
-      if(this.isLoading != 'false' || this.isLoading == undefined){
-        setTimeout(() => {
-          sessionStorage.setItem('loading', false);
-          this.isLoading = 'false';
-        }, 3000);
-      }
-    },
+  mounted() {
+    if (this.isLoading != "false" || this.isLoading == undefined) {
+      setTimeout(() => {
+        sessionStorage.setItem("loading", false);
+        this.isLoading = "false";
+      }, 3000);
+    }
+  },
 
-    methods: {
-      horizontalScroll(e){
-        
-        $('body').scrollLeft += e.deltaY;
-      }
+  methods: {
+    horizontalScroll(e) {
+      $("body").scrollLeft += e.deltaY;
     },
-  };
+  },
+};
 </script>
 
 <style>
-  @import '../assets/css/main.css';
+@import "../assets/css/main.css";
 </style>

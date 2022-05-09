@@ -37,17 +37,16 @@
 </template>
 
 <script>
-  import menuToggle from '../components/menu-toggle.vue'
-  export default {
-    name: "ProjectPage",
-    transition: "page",
-    components: {
-        menuToggle
-    }
-  };
-
+import menuToggle from "../components/menu-toggle.vue";
+export default {
+  name: "ProjectPage",
+  transition: "page",
+  components: {
+    menuToggle,
+  },
+};
 </script>
 
 <style>
-@import '../assets/css/main.css';
+@import "../assets/css/main.css";
 </style>
