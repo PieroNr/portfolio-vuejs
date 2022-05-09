@@ -36,21 +36,17 @@
 </div>
 </template>
 <style>
-@import url('https://fonts.googleapis.com/css?family=Marvel:400,700');
+@import url("https://fonts.googleapis.com/css?family=Marvel:400,700");
 
-@import '../assets/css/main.css';
-
-    
+@import "../assets/css/main.css";
 </style>
 <script>
-  import menuToggle from '../components/menu-toggle.vue'
-  export default {
-    name: "ProjectPage",
-    transition: "page",
-    components: {
-        menuToggle
-    }
-  };
-
-
+import menuToggle from "../components/menu-toggle.vue";
+export default {
+  name: "ProjectPage",
+  transition: "page",
+  components: {
+    menuToggle,
+  },
+};
 </script>

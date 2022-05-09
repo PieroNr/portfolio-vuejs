@@ -1,3 +1,3 @@
 document.addEventListener('wheel', (e) => {
-    document.getElementById('#wrapper').scrollLeft += e.deltaY;
+  document.getElementById('#wrapper').scrollLeft += e.deltaY
 })

@@ -10,23 +10,17 @@
   </div>
 </template>
 <style>
-
-    @import '../assets/css/main.css';
-
-    
+@import "../assets/css/main.css";
 </style>
 <script>
-  import menuToggle from '../components/menu-toggle.vue'
-  import SkillsWheel from '../components/skills-wheel.vue'
-  export default {
-    name: "SkillsPage",
-    transition: "page",
-    components: {
-        menuToggle,
-        SkillsWheel
-
-    }
-  };
-
-
+import menuToggle from "../components/menu-toggle.vue";
+import SkillsWheel from "../components/skills-wheel.vue";
+export default {
+  name: "SkillsPage",
+  transition: "page",
+  components: {
+    menuToggle,
+    SkillsWheel,
+  },
+};
 </script>
