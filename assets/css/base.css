@@ -1,6 +1,6 @@
 * {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -12,16 +12,22 @@ body {
 }
 
 a {
-  -webkit-transition: .2s ease-in-out;
-  transition: .2s ease-in-out;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
-a:visited, a:focus, a:active, a:link {
+a:visited,
+a:focus,
+a:active,
+a:link {
   text-decoration: none;
   outline: 0;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   margin: 0 0 1vw;
   font-weight: 700;
 }
@@ -32,7 +38,7 @@ ul {
 }
 
 @font-face {
-  font-family: 'Bangers';
+  font-family: "Bangers";
   src: url("../fonts/Bangers/bangers-regular-webfont.woff2"), format("woff2");
   src: url("../fonts/Bangers/bangers-regular-webfont.woff"), format("woff");
   src: url("../fonts/Bangers/Bangers-Regular.ttf"), format("truetype");
@@ -45,4 +51,17 @@ ul {
   src: url("../fonts/Komika-hand/Komika_hand.ttf"), format("truetype");
 } */
 
-@font-face {font-family: "Komika Hand"; src: url("//db.onlinewebfonts.com/t/6cfb67ef1f525261e4707ea346cbe415.eot"); src: url("//db.onlinewebfonts.com/t/6cfb67ef1f525261e4707ea346cbe415.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/6cfb67ef1f525261e4707ea346cbe415.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/6cfb67ef1f525261e4707ea346cbe415.woff") format("woff"), url("//db.onlinewebfonts.com/t/6cfb67ef1f525261e4707ea346cbe415.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/6cfb67ef1f525261e4707ea346cbe415.svg#Komika Hand") format("svg"); }
+@font-face {
+  font-family: "Komika Hand";
+  src: url("//db.onlinewebfonts.com/t/6cfb67ef1f525261e4707ea346cbe415.eot");
+  src: url("//db.onlinewebfonts.com/t/6cfb67ef1f525261e4707ea346cbe415.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/6cfb67ef1f525261e4707ea346cbe415.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/6cfb67ef1f525261e4707ea346cbe415.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/6cfb67ef1f525261e4707ea346cbe415.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/6cfb67ef1f525261e4707ea346cbe415.svg#Komika Hand")
+      format("svg");
+}

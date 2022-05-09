@@ -1,6 +1,4 @@
-<template>
-
-</template>
+<template></template>
 <style>
 .jelly-blob {
   position: fixed;
@@ -25,9 +23,9 @@
 }
 </style>
 <script>
-import { gsap } from 'gsap';
+import { gsap } from "gsap";
 
 export default {
-  name: "cursorMouse"
+  name: "cursorMouse",
 };
 </script>

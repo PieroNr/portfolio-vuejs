@@ -1,66 +1,68 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    padding: 2vw;
-    font-weight: 700;
-    overflow-y: hidden;
+  padding: 2vw;
+  font-weight: 700;
+  overflow-y: hidden;
 }
 
-a{
-    &:visited, &:focus, &:active, &:link {
-        text-decoration: none;
-        outline: 0;
-    }
+a {
+  &:visited,
+  &:focus,
+  &:active,
+  &:link {
+    text-decoration: none;
+    outline: 0;
+  }
 }
 
-
-h1, h2, h3, h4 {
-    margin: 0 0 1vw;
-    font-weight: 700;
+h1,
+h2,
+h3,
+h4 {
+  margin: 0 0 1vw;
+  font-weight: 700;
 }
 
 ul {
-    padding: 0;
-    list-style: none;
-}
-  
-@font-face {
-    font-family: 'Bangers';
-    src: url('../fonts/Bangers/bangers-regular-webfont.woff2'), format("woff2");
-    src: url('../fonts/Bangers/bangers-regular-webfont.woff'), format("woff");
-    src: url('../fonts/Bangers/Bangers-Regular.ttf'), format("truetype");
+  padding: 0;
+  list-style: none;
 }
 
 @font-face {
-    font-family: 'Komika Hand';
-    src: url('../fonts/Komika-hand/komika_hand.woff2'), format("woff2");
-    src: url('../fonts/Komika-hand/komika_hand.woff'), format("woff");
-    src: url('../fonts/Komika-hand/komika_hand.ttf'), format("truetype");
-} 
+  font-family: "Bangers";
+  src: url("../fonts/Bangers/bangers-regular-webfont.woff2"), format("woff2");
+  src: url("../fonts/Bangers/bangers-regular-webfont.woff"), format("woff");
+  src: url("../fonts/Bangers/Bangers-Regular.ttf"), format("truetype");
+}
 
+@font-face {
+  font-family: "Komika Hand";
+  src: url("../fonts/Komika-hand/komika_hand.woff2"), format("woff2");
+  src: url("../fonts/Komika-hand/komika_hand.woff"), format("woff");
+  src: url("../fonts/Komika-hand/komika_hand.ttf"), format("truetype");
+}
 
 .page-leave-active {
-    animation: translate-up .5s ease-in-out;
+  animation: translate-up 0.5s ease-in-out;
 }
 
-.page-enter-active{
-    animation: translate-up .5s  reverse;
+.page-enter-active {
+  animation: translate-up 0.5s reverse;
 }
 .page-enter,
 .page-leave-to {
-    
 }
 
 @keyframes translate-up {
-    0% {
-      transform: translate(0,0);
-    }
-    100% {
-      transform: translate(0,-105%);
-    }
+  0% {
+    transform: translate(0, 0);
   }
-
+  100% {
+    transform: translate(0, -105%);
+  }
+}

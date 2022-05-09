@@ -130,46 +130,39 @@
 </div>
 </template>
 
-
 <style>
-
-
-  @import '../assets/css/main.css';
-
-
+@import "../assets/css/main.css";
 </style>
 
 <script>
-  import menuToggle from '../components/menu-toggle.vue'
-  import loading from '../components/loading.vue'
-  export default {
-    name: "IndexPage",
-    transition: "page",
-    data() {
-      return {
-        isLoading: sessionStorage.getItem('loading')
-      };
-    },
-    components: {
-        menuToggle,
-        loading,
-    },
+import menuToggle from "../components/menu-toggle.vue";
+import loading from "../components/loading.vue";
+export default {
+  name: "IndexPage",
+  transition: "page",
+  data() {
+    return {
+      isLoading: sessionStorage.getItem("loading"),
+    };
+  },
+  components: {
+    menuToggle,
+    loading,
+  },
 
-    mounted(){
-      
-      if(this.isLoading != 'false' || this.isLoading == undefined){
-        setTimeout(() => {
-          sessionStorage.setItem('loading', false);
-          this.isLoading = 'false';
-        }, 3000);
-      }
-    },
+  mounted() {
+    if (this.isLoading != "false" || this.isLoading == undefined) {
+      setTimeout(() => {
+        sessionStorage.setItem("loading", false);
+        this.isLoading = "false";
+      }, 3000);
+    }
+  },
 
-    methods: {
-      horizontalScroll(e){
-        
-        this.$refs.wrapper.scrollLeft += e.deltaY;
-      }
+  methods: {
+    horizontalScroll(e) {
+      this.$refs.wrapper.scrollLeft += e.deltaY;
     },
-  };
+  },
+};
 </script>
