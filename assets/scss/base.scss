@@ -1,47 +1,50 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    padding: 2vw;
-    font-weight: 700;
-    
+  padding: 2vw;
+  font-weight: 700;
 }
 
-a{
-    &:visited, &:focus, &:active, &:link {
-        text-decoration: none;
-        outline: 0;
-    }
+a {
+  &:visited,
+  &:focus,
+  &:active,
+  &:link {
+    text-decoration: none;
+    outline: 0;
+  }
 }
 
-
-h1, h2, h3, h4 {
-    margin: 0 0 1vw;
-    font-weight: 700;
+h1,
+h2,
+h3,
+h4 {
+  margin: 0 0 1vw;
+  font-weight: 700;
 }
 
 ul {
-    padding: 0;
-    list-style: none;
-}
-  
-@font-face {
-    font-family: 'Bangers';
-    src: url(../fonts/Bangers/bangers-regular-webfont.woff2), format("woff2");
-    src: url(../fonts/Bangers/bangers-regular-webfont.woff), format("woff");
-    src: url(../fonts/Bangers/Bangers-Regular.ttf), format("truetype");
+  padding: 0;
+  list-style: none;
 }
 
 @font-face {
-    font-family: 'Komika Hand';
-    src: url(../fonts/Komika-hand/komika_hand.woff2), format("woff2");
-    src: url(../fonts/Komika-hand/komika_hand.woff), format("woff");
-    src: url(../fonts/Komika-hand/komika_hand.ttf), format("truetype");
-} 
+  font-family: "Bangers";
+  src: url(../fonts/Bangers/bangers-regular-webfont.woff2), format("woff2");
+  src: url(../fonts/Bangers/bangers-regular-webfont.woff), format("woff");
+  src: url(../fonts/Bangers/Bangers-Regular.ttf), format("truetype");
+}
 
+@font-face {
+  font-family: "Komika Hand";
+  src: url(../fonts/Komika-hand/komika_hand.woff2), format("woff2");
+  src: url(../fonts/Komika-hand/komika_hand.woff), format("woff");
+  src: url(../fonts/Komika-hand/komika_hand.ttf), format("truetype");
+}
 
 /*.page-leave-active {
     animation: translate-up .5s ease-in-out;
@@ -60,7 +63,7 @@ ul {
     }
   } */
 
-    /*.page-enter-active,
+/*.page-enter-active,
     .page-leave-active {
         position: absolute;
         transition: all 0.85s ease-in-out;
@@ -85,7 +88,7 @@ ul {
         transform: rotateZ(90deg);
     }*/
 
-    /*.page-leave-active {
+/*.page-leave-active {
         animation: move-down 1s ease-in-out;
         transform-origin: 0% 0%;
     }
@@ -113,49 +116,48 @@ ul {
         }
       }*/
 
+.button-wrapper {
+  object-fit: none;
+  transition: none;
+  clip-path: none;
+  width: 10vw;
+  height: 3.5vw;
 
-  .button-wrapper {
-    object-fit: none;
-    transition: none;
-    clip-path: none;
-    width: 10vw;
-    height: 3.5vw;           
+  a {
+    position: relative;
+    width: 100%;
+    padding-top: 25%;
+    display: block;
+    background-size: 100% 100%;
+    font-family: $fontTexte;
+    font-size: 1vw;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #333;
 
-    a{
-        position: relative;
+    &.button {
+      background-image: url("../img/BTN-img2.webp");
+      &:after {
+        content: attr(title);
+        background-size: cover;
         width: 100%;
-        padding-top: 25%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
         display: block;
-        background-size: 100% 100%;
-        font-family: $fontTexte;
-        font-size: 1vw;
-        margin-bottom: 20px;
-        text-decoration: none;
-        color: #333;
-        
-        &.button {
-            background-image: url("../img/BTN-img2.webp");
-            &:after {
-                content: attr(title);
-                background-size: cover;
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                top: 0;
-                left: 0;
-                display: block;
-                background-image: url("../img/BTN-img.webp");
-                transition: all 0.3s;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-        
-            &:hover:after {
-                -webkit-transform: translate(2.5%, 10%);
-                transform: translate(2.5%, 10%);
-                color: black;
-            }
-        }
+        background-image: url("../img/BTN-img.webp");
+        transition: all 0.3s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      &:hover:after {
+        -webkit-transform: translate(2.5%, 10%);
+        transform: translate(2.5%, 10%);
+        color: black;
+      }
     }
+  }
 }
