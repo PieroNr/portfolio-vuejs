@@ -2,7 +2,8 @@
 <div class="container home" >
   <loading v-if="isLoading != 'false' "></loading>
   <menuToggle />
-  <div class="home-content" @wheel="horizontalScroll" ref="wrapper" >
+  <div class="black-overlay"></div>
+  <div class="home-content" >
   <section class="home-content-grid">
 
     <figure class="home-content-grid__cell">
@@ -39,6 +40,7 @@
      <figure class="home-content-grid__cell">
       <div class="cell-content">
         <img class="cell-content__img --light" src="../assets/svg/min/light-1.svg" >
+        
       </div>
     </figure>
 
@@ -99,7 +101,10 @@
     </figure>
 
     <figure class="home-content-grid__cell">
-      <div class="cell-content">  
+      <div class="cell-content"> 
+        <h2 class="cell-content__text --titleSecond">
+            <span> Soon ...</span>
+          </h2> 
       </div>
     </figure>
 
@@ -135,6 +140,7 @@
   import menuToggle from '../components/menu-toggle.vue'
   import loading from '../components/loading.vue'
   import $ from 'jquery';
+  import { TweenLite, TweenMax, Power1 } from 'gsap';
   export default {
     name: "IndexPage",
     transition: "page",
@@ -156,14 +162,33 @@
           this.isLoading = 'false';
         }, 3000);
       }
+      TweenMax.to(".--light", 0.7, {
+      y: "-=20px",
+      yoyo:true,
+      repeat:-1,
+      ease: Power2.easeOut//,
+
+      });
+      let nbClick = 3;
+       $(".--light").on("click", function() {
+        TweenMax.fromTo(this, 0.01, {x:-50}, {x:50, clearProps:"x", repeat:40});
+        TweenMax.fromTo(this, 0.02, {y:-50}, {y:50, clearProps:"y", repeat:20});
+        nbClick--;
+        if(nbClick==0){
+          $(".--light").css("opacity", "0");
+          $(".black-overlay").css("display", "block");
+          $(".--light").parent().css("background", "black");
+          $(".--light").parent().parent().css("z-index", "4");
+          $(".--light" ).after( "<p class=\"cell-content__text --smallt\">Oh no... the light bulb... it's broken</p>" );
+        }
+      });
+
+      TweenLite.set(".--phone", {transformOrigin:"center top"});
+
+      TweenMax.to(".--phone", 1, {rotation:10, repeat: -1, ease: Power1.easeOut, yoyo: true })
     },
 
-    methods: {
-      horizontalScroll(e){
-        
-        $('body').scrollLeft += e.deltaY;
-      }
-    },
+    
   };
 </script>
 
