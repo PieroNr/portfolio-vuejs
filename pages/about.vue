@@ -14,10 +14,10 @@
             <div class="content-text">
               <p>Hi! I’m Piero Neri. A young <span style="color:blue">Fr</span><span style="color:white">en</span><span style="color:red">ch</span> fullsatck web developer in training since 2018 and currently studying at the Hetic digital school in Montreuil, In the Paris region. I enrich my knowledge every day to apply them in my personal and professional projects. I like to create original designs and user experiences to improve my job. If you’re interested in my profile, let’s team up! </p>
               <div class="content-links">
-                <a href="https://www.linkedin.com/in/piero-neri-39719b195/" target="_blank">LinkedIn</a>
-                <a href="https://github.com/PieroNr" target="_blank">GitHub</a>
-                <a href="https://www.instagram.com/beastcartoondraft/?hl=fr" target="_blank">Instagram</a>
-                <a href="mailto:piero.neri@hotmail.fr" target="_blank">Mail</a>
+                <a href="https://www.linkedin.com/in/piero-neri-39719b195/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://github.com/PieroNr" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://www.instagram.com/beastcartoondraft/?hl=fr" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href="mailto:piero.neri@hotmail.fr" target="_blank" rel="noopener noreferrer">Mail</a>
               </div>
             
             </div>

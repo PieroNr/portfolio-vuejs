@@ -1,6 +1,14 @@
 <template>
 
 </template>
+
+<script>
+import { gsap } from 'gsap';
+
+export default {
+  name: "cursorMouse"
+};
+</script>
 <style>
 .jelly-blob {
   position: fixed;
@@ -24,10 +32,3 @@
   mix-blend-mode: difference;
 }
 </style>
-<script>
-import { gsap } from 'gsap';
-
-export default {
-  name: "cursorMouse"
-};
-</script>
