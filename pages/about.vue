@@ -25,9 +25,7 @@
   </div>
 </div>
 </template>
-<style>
-  @import '../assets/css/main.css';
-</style>
+
 
 
 <script>
@@ -88,3 +86,7 @@
    
     };
 </script>
+
+<style>
+  @import '../assets/css/main.css';
+</style>
