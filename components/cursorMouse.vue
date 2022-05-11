@@ -1,12 +1,10 @@
-<template>
-
-</template>
+<template></template>
 
 <script>
-import { gsap } from 'gsap';
+import { gsap } from "gsap";
 
 export default {
-  name: "cursorMouse"
+  name: "cursorMouse",
 };
 </script>
 <style>
