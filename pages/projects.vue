@@ -39,34 +39,33 @@
 </template>
 
 <script>
-  import menuToggle from '../components/menu-toggle.vue'
-  import cursorMouse from "../components/cursorMouse.vue";
-  import loading from "../components/loading.vue";
-  export default {
-    name: "ProjectPage",
-    transition: "page",
-    data() {
-      return {
-        isLoading: sessionStorage.getItem("loading"),
-      };
-    },
-    components: {
-        menuToggle,
-        cursorMouse,
-        loading
-    },
-    mounted(){
-      if (this.isLoading != "false" || this.isLoading == undefined) {
+import menuToggle from "../components/menu-toggle.vue";
+import cursorMouse from "../components/cursorMouse.vue";
+import loading from "../components/loading.vue";
+export default {
+  name: "ProjectPage",
+  transition: "page",
+  data() {
+    return {
+      isLoading: sessionStorage.getItem("loading"),
+    };
+  },
+  components: {
+    menuToggle,
+    cursorMouse,
+    loading,
+  },
+  mounted() {
+    if (this.isLoading != "false" || this.isLoading == undefined) {
       setTimeout(() => {
         sessionStorage.setItem("loading", false);
         this.isLoading = "false";
       }, 3000);
     }
-    }
-  };
-
+  },
+};
 </script>
 
 <style>
-@import '../assets/css/main.css';
+@import "../assets/css/main.css";
 </style>

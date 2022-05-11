@@ -1,36 +1,36 @@
-.error-container{
-    width: 100%;
-    height: calc(100vh - 4vw);
-    border: 0.4vw solid black;
-    background: url($svgPathMin +'circle-pattern-1.svg');
-    background-size: 80%;
-    background-position: center;
-    background-repeat: no-repeat;
-    
-    a {
-        position: absolute;
-        top: 0;
-        left: 4vw;
-        font-family: Bangers;
-        font-size: clamp(2.5rem, 2.2685rem + 1.2346vw, 3.75rem);
-        font-weight: 400;
-        color: black;
-        padding: 2vw 3vw;
-        background-color: white;
-        border: 5px black solid;
-        margin: 10px 0;
-    }
-    .title-error{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: 100%;
-        font-family: $fontTitle;
-        text-align: center;
-        font-weight: 400;
-        margin: auto;
-        font-size: 4vw;
-        text-shadow: 10px 7px 0px #00000067;
-        color: $white;
-    }
+.error-container {
+  width: 100%;
+  height: calc(100vh - 4vw);
+  border: 0.4vw solid black;
+  background: url($svgPathMin + "circle-pattern-1.svg");
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  a {
+    position: absolute;
+    top: 0;
+    left: 4vw;
+    font-family: Bangers;
+    font-size: clamp(2.5rem, 2.2685rem + 1.2346vw, 3.75rem);
+    font-weight: 400;
+    color: black;
+    padding: 2vw 3vw;
+    background-color: white;
+    border: 5px black solid;
+    margin: 10px 0;
+  }
+  .title-error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    font-family: $fontTitle;
+    text-align: center;
+    font-weight: 400;
+    margin: auto;
+    font-size: 4vw;
+    text-shadow: 10px 7px 0px #00000067;
+    color: $white;
+  }
 }

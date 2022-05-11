@@ -1,154 +1,140 @@
+.skills {
+  overflow: hidden;
+  height: calc(100vh - 4vw);
+  &:before {
+    content: "Skills";
+    font-family: $fontTitle;
+    font-size: clamp(1.875rem, 1.2784rem + 3.1818vw, 6.25rem);
+    font-weight: 400;
+    background-color: $yellow;
+    border: 0.4vw solid black;
+    border-right: none;
+    position: absolute;
+    padding-top: 20px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    top: clamp(2.9375rem, 2.5284rem + 2.1818vw, 5.9375rem);
+    right: 0px;
+    z-index: 1;
+  }
 
-.skills{
+  .skills-content {
+    background: url($svgPathMin + "shapes-pattern.svg"), $white;
+    height: 100%;
+    padding: 4vw 4vw 4vw 4vw;
+    border: $border_width solid black;
+    position: relative;
     overflow: hidden;
-    height: calc(100vh - 4vw);
-    &:before{
-        content: 'Skills';
-        font-family: $fontTitle;
-        font-size: clamp(1.875rem, 1.2784rem + 3.1818vw, 6.25rem);
-        font-weight: 400;
-        background-color: $yellow;
-        border: 0.4vw solid black;
-        border-right: none;
-        position: absolute;
-        padding-top: 20px;
-        padding-right: 50px;
-        padding-bottom: 20px;
-        padding-left: 20px;
-        top: clamp(2.9375rem, 2.5284rem + 2.1818vw, 5.9375rem);
-        right: 0px;
-        z-index: 1;
+    background-repeat: repeat;
+    background-size: 15%;
 
-        
-    }
+    &-grid {
+      width: 100%;
+      height: 100%;
 
-    .skills-content {
-        
-        background: url($svgPathMin +'shapes-pattern.svg'), $white;
+      &__svg {
         height: 100%;
-        padding: 4vw  4vw 4vw 4vw ;
-        border: $border_width solid black;
-        position: relative;
-        overflow: hidden;
-        background-repeat: repeat;
-        background-size: 15%;
-        
-        &-grid {
-            width: 100%;
-            height: 100%;
-            
-            &__svg {
-                height: 100%;
-            }
-    
-            svg {
-                overflow: unset;
-                width: 100%;
-                height: auto;
-                circle {
-                    stroke: black;
-                } 
-                #master{
-                    .group{
-                        rect{
-                            fill: #ffe364;
-                        }
+      }
 
-                        g rect {
-                            fill: black;
-                        }
-                        
-                        text{
-                            
-                            text-shadow: 2px 1px 0px #ffffff;
-                            display: none;
-                            font-size: 24px;
-                        }                   
-                        &:hover{
-                            text{
-                                display: block;
-                                animation: reveal 0.5s cubic-bezier(0.77, 0, 0.175, 1) ;
-                                position: absolute;
-
-                                @keyframes reveal {
-                                    0% {
-                                      
-                                      opacity: 0;
-                                      transform: translate(0,5%);
-                                    }
-                                    100% {
-                                      opacity: 1;
-                                      transform: translate(0,0);
-                                    }
-                                  }
-                            }
-                        }
-                    }
-                }
-                
-            }  
+      svg {
+        overflow: unset;
+        width: 100%;
+        height: auto;
+        circle {
+          stroke: black;
         }
-        &__img{
-            pointer-events: none;
-            object-fit: 80%;
-            object-position: center;
-            position: absolute;
-            height: 95%;
-            width: fit-content;
-            left: 50%;
-            bottom: 0;
-            transform: translate(-50%, 0.1vw);
-        }   
+        #master {
+          .group {
+            rect {
+              fill: #ffe364;
+            }
+
+            g rect {
+              fill: black;
+            }
+
+            text {
+              text-shadow: 2px 1px 0px #ffffff;
+              display: none;
+              font-size: 24px;
+            }
+            &:hover {
+              text {
+                display: block;
+                animation: reveal 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+                position: absolute;
+
+                @keyframes reveal {
+                  0% {
+                    opacity: 0;
+                    transform: translate(0, 5%);
+                  }
+                  100% {
+                    opacity: 1;
+                    transform: translate(0, 0);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
-    @media (max-width: 1024px) {
-        &:before{
-            border: 0.6vw solid black;
-   
+    &__img {
+      pointer-events: none;
+      object-fit: 80%;
+      object-position: center;
+      position: absolute;
+      height: 95%;
+      width: fit-content;
+      left: 50%;
+      bottom: 0;
+      transform: translate(-50%, 0.1vw);
+    }
+  }
+  @media (max-width: 1024px) {
+    &:before {
+      border: 0.6vw solid black;
+    }
+    .skills-content {
+      background-size: 30%;
+      border: 0.6vw solid black;
+      &-grid {
+        &__svg {
+          svg {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: auto;
+            height: 100%;
+          }
         }
-        .skills-content {
-            background-size: 30%; 
-            border: 0.6vw solid black;
-            &-grid {                
-                &__svg {
-                    svg {
-                        position: absolute;
-                        left: 50%;
-                        top: 50%;
-                        transform: translate(-50%,-50%);
-                        width: auto;
-                        height: 100%;
-                        
-                    }
-                }
-            }
-            &__img{
-                height: 60%;
-            }
+      }
+      &__img {
+        height: 60%;
+      }
+    }
+  }
+  @media (max-width: 765px) {
+    &:before {
+      border: 0.8vw solid black;
+    }
+    .skills-content {
+      background-size: 40%;
+      border: 0.8vw solid black;
+      &-grid {
+        &__svg {
+          svg {
+            transform: translate(-50%, -40%);
+            height: 120%;
+          }
         }
-        
-
-    }    
-    @media (max-width: 765px) {
-        &:before{
-            border: 0.8vw solid black;
-   
-        }
-        .skills-content {
-            background-size: 40%; 
-            border: 0.8vw solid black;
-            &-grid {                
-                &__svg {
-                    svg {
-                        transform: translate(-50%,-40%);
-                        height: 120%;
-                        
-                    }
-                }
-            }
-            &__img{
-                height: 60%;
-            }
-        }
-
-    }    
+      }
+      &__img {
+        height: 60%;
+      }
+    }
+  }
 }
