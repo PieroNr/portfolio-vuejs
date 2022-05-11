@@ -17,7 +17,7 @@
       <div class="cell-content" >
         <div class="cell-content-textContent">
           <h1 class="cell-content__text --titleFirst">
-            <span> - DEVMAN - </span>
+            <span> - Piero Neri - </span>
             <span> FULLSTACK DEVELOPER WEB </span>
           </h1>
         </div>
@@ -29,7 +29,7 @@
         <img class="cell-content__img --woman" src="../assets/svg/min/woman-glasses.svg" >
         <div>
           <img class="cell-content__img --bubble" src="../assets/svg/min/bubble-1.svg" >
-          <p class="cell-content__text --smallt">Passionné de web, de programmation,  de création et d’expériences digitales. J’aime prendre part à des projets toujours plus inovants et originals et je m’investis au maximum en tant que développeur fullstack. </p>
+          <p class="cell-content__text --smallt">Passionate about web, programming, creation and digital experiences. I like to take part in projects always more inovants and originals and I invest to the maximum as a fullstack developer. </p>
           <div class="button-wrapper">
             <NuxtLink class="button" to="/projects" title="PROJECTS ->"></NuxtLink>
           </div>
@@ -111,15 +111,15 @@
     <figure class="home-content-grid__cell">
       <div class="cell-content">
         <h2 class="cell-content__text --titleSecond">
-          MULTIDISCIPLINAIRE
+          MULTIDISCIPLINARY
         </h2>
-        <p  class="cell-content__text --smallt">Etre polyvalent est une force dans le domaine du web, par 
-        exemple pour faire face aux divers imprévus dans une 
-        équipe. Aussi compétent côté front-end et back-end avec 
-        une légère touche de création. Devman est le couteau 
-        suisse des développeur ! </p>
+        <p  class="cell-content__text --smallt">Being versatile is a force in the web domain, by 
+        example to deal with the various unforeseen in a 
+        team. Also competent front-end and back-end with 
+        a touch of creation. Devman is the knife 
+        Swiss Developer! </p>
         <div class="button-wrapper">
-          <NuxtLink class="button" to="/skills" title="COMPÉTENCES ->"></NuxtLink>
+          <NuxtLink class="button" to="/skills" title="SKILLS ->"></NuxtLink>
         </div>
       </div>        
     </figure>
