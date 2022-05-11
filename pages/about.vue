@@ -2,6 +2,7 @@
   <div class="container about">
     <loading v-if="isLoading != 'false'"></loading>
     <menuToggle />
+    <cursorMouse />
     <div class="about-content">
       <div class="about-content__bubble">
         <img class="bubble-img" src="../assets/svg/min/bubble-2.svg" />
@@ -59,7 +60,8 @@
 <script>
 import menuToggle from "../components/menu-toggle.vue";
 import loading from "../components/loading.vue";
-import { TimelineMax } from "gsap";
+import cursorMouse from "../components/cursorMouse.vue";
+import { TimelineMax, TweenLite,TweenMax, Power1, Bounce } from "gsap";
 import $ from "jquery";
 export default {
   name: "AboutPage",
@@ -72,6 +74,7 @@ export default {
   components: {
     menuToggle,
     loading,
+    cursorMouse
   },
   mounted() {
     if (this.isLoading != "false" || this.isLoading == undefined) {
@@ -100,7 +103,7 @@ export default {
       .to(".about-content__profil", 1, { x: "0%" });
 
     var nbClicks = 0;
-    var bubbleText = ["Aïe", "Ouch", "AAH", "Ok Ok I leave ..."];
+    var bubbleText = ["Aïe", "Ouch", "AAH", "Ok..."];
     $(".about-content__profil").on("click", function () {
       TweenMax.to(".bubble-img", 0.2, { scale: 1, ease: Power1.easeOut });
       $(".bubble-text").text(bubbleText[nbClicks]);

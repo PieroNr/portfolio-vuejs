@@ -18,10 +18,8 @@
 </template>
 
 <script>
-  import { gsap } from 'gsap';
   import $ from 'jquery';
-  import { TimelineMax, Power2, Power4, TweenMax  } from 'gsap';
-  import { CSSPlugin } from 'gsap/CSSPlugin'
+  import { TimelineMax, Power2, Power4, TweenMax, Elastic  } from 'gsap';
 
   export default { 
   name: "menuToggle",

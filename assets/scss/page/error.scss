@@ -11,6 +11,14 @@
         position: absolute;
         top: 0;
         left: 4vw;
+        font-family: Bangers;
+        font-size: clamp(2.5rem, 2.2685rem + 1.2346vw, 3.75rem);
+        font-weight: 400;
+        color: black;
+        padding: 2vw 3vw;
+        background-color: white;
+        border: 5px black solid;
+        margin: 10px 0;
     }
     .title-error{
         display: flex;

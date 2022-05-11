@@ -5,7 +5,7 @@
     &:before{
         content: 'Skills';
         font-family: $fontTitle;
-        font-size: 4vw;
+        font-size: clamp(1.875rem, 1.2784rem + 3.1818vw, 6.25rem);
         font-weight: 400;
         background-color: $yellow;
         border: 0.4vw solid black;
@@ -15,7 +15,7 @@
         padding-right: 50px;
         padding-bottom: 20px;
         padding-left: 20px;
-        top: 60px;
+        top: clamp(2.9375rem, 2.5284rem + 2.1818vw, 5.9375rem);
         right: 0px;
         z-index: 1;
 
@@ -29,7 +29,7 @@
         padding: 4vw  4vw 4vw 4vw ;
         border: $border_width solid black;
         position: relative;
-        overflow-y: hidden;
+        overflow: hidden;
         background-repeat: repeat;
         background-size: 15%;
         
@@ -62,7 +62,7 @@
                             
                             text-shadow: 2px 1px 0px #ffffff;
                             display: none;
-                            font-size: 1.5vw;
+                            font-size: 24px;
                         }                   
                         &:hover{
                             text{
@@ -99,5 +99,56 @@
             bottom: 0;
             transform: translate(-50%, 0.1vw);
         }   
+    }
+    @media (max-width: 1024px) {
+        &:before{
+            border: 0.6vw solid black;
+   
+        }
+        .skills-content {
+            background-size: 30%; 
+            border: 0.6vw solid black;
+            &-grid {                
+                &__svg {
+                    svg {
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%,-50%);
+                        width: auto;
+                        height: 100%;
+                        
+                    }
+                }
+            }
+            &__img{
+                height: 60%;
+            }
+        }
+        
+
+    }    
+    @media (max-width: 765px) {
+        &:before{
+            border: 0.8vw solid black;
+   
+        }
+        .skills-content {
+            background-size: 40%; 
+            border: 0.8vw solid black;
+            &-grid {                
+                &__svg {
+                    svg {
+                        transform: translate(-50%,-40%);
+                        height: 120%;
+                        
+                    }
+                }
+            }
+            &__img{
+                height: 60%;
+            }
+        }
+
     }    
 }

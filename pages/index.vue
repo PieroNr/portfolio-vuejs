@@ -2,6 +2,8 @@
 <div class="container home" >
   <loading v-if="isLoading != 'false' "></loading>
   <menuToggle />
+  <cursorMouse />
+  
   <div class="black-overlay"></div>
   <div class="home-content" >
   <section class="home-content-grid">
@@ -139,8 +141,9 @@
 <script>
 import menuToggle from "../components/menu-toggle.vue";
 import loading from "../components/loading.vue";
+import cursorMouse from "../components/cursorMouse.vue";
 import $ from "jquery";
-import { TweenLite, TweenMax, Power1 } from "gsap";
+import { TweenLite, TweenMax, Power1, Power2 } from "gsap";
 export default {
   name: "IndexPage",
   transition: "page",
@@ -152,6 +155,7 @@ export default {
   components: {
     menuToggle,
     loading,
+    cursorMouse,
   },
 
   mounted() {

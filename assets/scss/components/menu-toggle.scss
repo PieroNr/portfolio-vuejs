@@ -66,6 +66,7 @@
     right: 0;
     transform: translate3d(-100%, 0, 0);
     z-index: 2;
+    overflow-x: hidden;
 
     section {
         display: flex;

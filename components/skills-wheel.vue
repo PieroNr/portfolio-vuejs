@@ -162,7 +162,7 @@
 
 <script>
 import { gsap } from 'gsap';
-import { TweenMax  } from 'gsap';
+import { TweenMax, Linear  } from 'gsap';
 export default {
   name: "SkillsWheel",
   mounted(){
