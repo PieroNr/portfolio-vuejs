@@ -1933,6 +1933,10 @@ ul {
   -ms-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   -o-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  -webkit-transition: -webkit-clip-path 0.8s ease-in-out;
+  transition: -webkit-clip-path 0.8s ease-in-out;
+  transition: clip-path 0.8s ease-in-out;
+  transition: clip-path 0.8s ease-in-out, -webkit-clip-path 0.8s ease-in-out;
 }
 
 .skewback {
@@ -1941,6 +1945,10 @@ ul {
   -ms-clip-path: polygon(0 0, -100% 0, 100% 100%, 0 100%);
   -o-clip-path: polygon(0 0, -100% 0, 100% 100%, 0 100%);
   clip-path: polygon(0 0, -100% 0, 100% 100%, 0 100%);
+  -webkit-transition: -webkit-clip-path 1.5s ease-in-out;
+  transition: -webkit-clip-path 1.5s ease-in-out;
+  transition: clip-path 1.5s ease-in-out;
+  transition: clip-path 1.5s ease-in-out, -webkit-clip-path 1.5s ease-in-out;
 }
 
 .jelly-blob {

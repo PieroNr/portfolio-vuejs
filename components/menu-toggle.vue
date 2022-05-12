@@ -43,18 +43,21 @@
         window.matchMedia("(max-width: 580px)")
         ]
 
+        const random = Math.floor(Math.random() * colorPalet.length);
+        navMain.style.backgroundColor = colorPalet[random];
+
         function mediaqueryresponse(mql){
             if (mqls[0].matches){
                 menuAnimation
-                .to(navMain, 0.8, {width: '100vw', className : "+=vertical", ease: Power2.easeInOut, transform: "translate3d(0,0,0)"},0);
+                .to(navMain, 0.8, {width: '100vw', className : "vertical", transform: "translate3d(0,0,0)"},0);
             }
             if (mqls[1].matches){
                 menuAnimation
-                .to(navMain, 0.8, {width: '100vw', className : "+=vertical", ease: Power2.easeInOut, transform: "translate3d(0,0,0)"},0);
+                .to(navMain, 0.8, {width: '100vw', className : "vertical", transform: "translate3d(0,0,0)"},0);
             }
             if (mqls[2].matches){
                 menuAnimation
-                .to(navMain, 0.8, {width: '100vw', className : "+=vertical", ease: Power2.easeInOut, transform: "translate3d(0,0,0)"},0);
+                .to(navMain, 0.8, {width: '100vw', className : "vertical", transform: "translate3d(0,0,0)"},0);
             }
         }
 
@@ -64,7 +67,7 @@
         }
 
         menuAnimationBack
-        .to(navMain, 0.55, {width: 0, className : "+=skewback", ease: Power4.easeIn, transform: "translate3d(0,0,0)"},0);
+        .to(navMain, 0.55, {width: 0, className : "skewback", transform: "translate3d(0,0,0)"},0);
         
         menuButton.onclick = function() {
             if(navMain.classList.contains('skewback')){

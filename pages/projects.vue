@@ -30,6 +30,8 @@
         </div>
     </div>
 
+</div>
+
     
 
 
@@ -42,6 +44,10 @@
   import menuToggle from '../components/menu-toggle.vue'
   import cursorMouse from "../components/cursorMouse.vue";
   import loading from "../components/loading.vue";
+  import { gsap } from 'gsap';
+  import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+
   export default {
     name: "ProjectPage",
     transition: "page",
@@ -57,13 +63,17 @@
     },
     mounted(){
       if (this.isLoading != "false" || this.isLoading == undefined) {
-      setTimeout(() => {
-        sessionStorage.setItem("loading", false);
-        this.isLoading = "false";
-      }, 3000);
-    }
+        setTimeout(() => {
+          sessionStorage.setItem("loading", false);
+          this.isLoading = "false";
+        }, 3000);
+      }
+
     }
   };
+
+ 
+
 
 </script>
 

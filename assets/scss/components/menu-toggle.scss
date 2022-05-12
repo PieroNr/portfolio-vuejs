@@ -92,11 +92,12 @@
 
 
 .skew {
-    -webkit-clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0,90% 100%, 0 100%);
     -moz-clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
     -ms-clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
     -o-clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+    
 }
 
 
@@ -106,6 +107,8 @@
     -ms-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     -o-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transition: clip-path 0.8s ease-in-out;
+    
 }
 
 .skewback {
@@ -114,5 +117,6 @@
     -ms-clip-path: polygon(0 0, -100% 0, 100% 100%, 0 100%);
     -o-clip-path: polygon(0 0, -100% 0, 100% 100%, 0 100%);
     clip-path: polygon(0 0, -100% 0, 100% 100%, 0 100%);
+    transition: clip-path 1.5s ease-in-out;
 
 }
