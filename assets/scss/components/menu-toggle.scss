@@ -11,18 +11,23 @@
     height: 18px;
     z-index: 2;
     cursor: pointer;
+    mix-blend-mode: difference;
 
 }
 
 .menu-bars{
     display:flex;
     flex-direction:column;
+    background-color: $black;
+    padding: 10px;
+    width: 50px;
+    border-radius: 100%;
         .bar1{
             background-color:#fff;
-            width: 16px;
-            height: 2px;
+            width: 28px;
+            height: 5px;
             position: relative;
-            margin: 0 0 2px 0;
+            margin: 2px 0;
             -webkit-transform-origin: center center;
             transform-origin: center center;
         }
@@ -30,7 +35,7 @@
         .bar2{
             background-color:#fff;
             width: 28px;
-            height: 2px;
+            height: 5px;
             position: relative;
             margin: 2px 0;
             -webkit-transform-origin: center center;
@@ -39,10 +44,10 @@
         
         .bar3{
             background-color:#fff;
-            width: 16px;
-            height: 2px;
+            width: 28px;
+            height: 5px;
             position: relative;
-            left: 16px;
+            
             margin: 2px 0 0 0;
             -webkit-transform-origin: center center;
                     transform-origin: center center;
@@ -66,7 +71,6 @@
     right: 0;
     transform: translate3d(-100%, 0, 0);
     z-index: 2;
-    overflow-x: hidden;
 
     section {
         display: flex;
@@ -75,6 +79,7 @@
         align-content: center;
         align-items: center;
         position: fixed;
+        top: 30%;
 
         .nav-link{
             font-family: Bangers;
@@ -85,14 +90,27 @@
             background-color: white;
             border: 5px black solid;
             margin: 10px 0;
+           
         }
+    }
+
+    .nav-link{
+        &-home{
+            position: absolute;
+            top: 5%;
+            &__img{
+                width: clamp(7.8125rem, 4.6875rem + 4.8828vw, 12.5rem);
+                border-radius: 50%;
+            }
+        }
+       
     }
 
 }
 
 
 .skew {
-    -webkit-clip-path: polygon(0 0, 100% 0,90% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
     -moz-clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
     -ms-clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
     -o-clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
@@ -100,23 +118,3 @@
     
 }
 
-
-.vertical {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    -moz-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    -ms-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    -o-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    transition: clip-path 0.8s ease-in-out;
-    
-}
-
-.skewback {
-    -webkit-clip-path: polygon(0 0, -100% 0, 100% 100%, 0 100%);
-    -moz-clip-path: polygon(0 0, -100% 0, 100% 100%, 0 100%);
-    -ms-clip-path: polygon(0 0, -100% 0, 100% 100%, 0 100%);
-    -o-clip-path: polygon(0 0, -100% 0, 100% 100%, 0 100%);
-    clip-path: polygon(0 0, -100% 0, 100% 100%, 0 100%);
-    transition: clip-path 1.5s ease-in-out;
-
-}

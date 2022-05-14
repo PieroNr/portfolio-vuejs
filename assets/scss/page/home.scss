@@ -1,19 +1,31 @@
+.homeBody {
+  padding: 2vw 0vw 2vw 2vw;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+p{
+  white-space: normal;
+}
 .black-overlay {
   position: absolute;
   z-index: 3;
-  width: 200vw;
-  height: 200vw;
+  width: 100vw;
+  height: 100vh;
   top: 0;
   left: 0;
   background-color: #000000;
   display: none;
+  
 }
 .home-content {
   height: calc(100vh - 4vw);
   width: 170%;
   overflow-x: scroll;
   overflow-y: hidden;
+
   .home-content-grid {
+
     position: relative;
     display: grid;
     height: 100%;
@@ -21,6 +33,7 @@
     grid-template-columns: 1.6fr 1fr 0.33fr 0.6fr 0.03fr 0.08fr 1fr 0.12fr 0.33fr 0.33fr 0.33fr 0.8fr;
     grid-template-rows: 0.6fr 0.5fr 1.2fr 0.1fr 0.3fr 0.6fr;
     grid-gap: $gutter;
+    
 
     figure {
       overflow: hidden;
@@ -395,6 +408,7 @@
 
           &__text {
             &.--titleThird {
+              
               span {
                 width: 96%;
                 font-family: $fontTitle;
@@ -408,13 +422,26 @@
                 font-size: 38px;
                 line-height: 2vw;
               }
+              
             }
+            
+          }
+          .cell-content-text{
+            margin-top: 2vw;
+            p{
+              color: $white;
+              margin-left: 2vw;
+              font-family: $fontTexte;
+              font-size: clamp(0.625rem, -0.0254rem + 1.0163vw, 1.5625rem);
+              a {
+                color: $white;
+                text-decoration: underline;
+              }
+            }
+
           }
 
-          &__img {
-            width: 15%;
-            margin: 0 0.5vw;
-          }
+          
         }
       }
 
@@ -676,6 +703,18 @@
           grid-column: 1 / 2 !important;
           grid-row: 15 / 18 !important;
           width: auto;
+
+          .cell-content-text {
+            margin-top: 4vw !important;
+            p {
+              font-size: clamp(
+                  0.9375rem,
+                  0.3808rem + 1.1628vw,
+                  1.125rem
+                ) !important;
+                margin-top: 2vw;
+            }
+          }
         }
         &:nth-child(11) {
           grid-column: 2 / 3 !important;
@@ -845,6 +884,17 @@
           grid-column: 1 / 2 !important;
           grid-row: 28 / 32 !important;
           width: auto;
+          .cell-content-text {
+            margin-top: 8vw !important;
+            p {
+              font-size: clamp(
+                  0.5625rem,
+                  0.2802rem + 1.5054vw,
+                  1rem
+                ) !important;
+                margin-top: 2vw;
+            }
+          }
         }
         &:nth-child(11) {
           grid-column: 2 / 3 !important;

@@ -1,4 +1,5 @@
 <template lang="fr">
+<horizontal-scroll>
 <div class="container home" >
   <loading v-if="isLoading != 'false' "></loading>
   <menuToggle />
@@ -48,7 +49,7 @@
 
     <figure class="home-content-grid__cell">
       <div class="cell-content">
-        <img class="cell-content__img --eye" src="../assets/svg/min/yeux.svg" >
+        <img id="eye" class="cell-content__img --eye" src="../assets/svg/min/yeux.svg" >
       </div>
     </figure>
 
@@ -76,7 +77,7 @@
             <span> LAST PROJECT :</span>
           </h2>
         </div>
-        <img class="cell-content__img --tabletProject" src="../assets/svg/min/project-tablet.svg" >
+        <NuxtLink to="/projects"><img class="cell-content__img --tabletProject" src="../assets/svg/min/project-tablet.svg" ></NuxtLink>
       </div>
     </figure>
 
@@ -90,8 +91,21 @@
           <h3 class="cell-content__text --titleThird">
             <span>Contact:</span>
           </h3>
-          <a href="https://www.linkedin.com/in/piero-neri-39719b195/" target="_blank"><img class="cell-content__img --linkedin" src="../assets/img/Linkedin.png" > </a>
-          <a href="https://www.instagram.com/beastcartoondraft/?hl=fr" target="_blank"><img class="cell-content__img --instagram" src="../assets/img/Instagram.png" ></a>
+          <div class="cell-content-text">
+            <p  class="cell-content__text --smallt">
+              - LinkedIn : <a href="https://www.linkedin.com/in/piero-neri-39719b195/">Piero Neri</a>
+            </p>
+            <p  class="cell-content__text --smallt">
+              - Instagram : <a href="https://www.instagram.com/beastcartoondraft/?hl=fr">@beastcartoondraft</a>
+            </p>
+            <p  class="cell-content__text --smallt">
+              - Email : <a href="mailto:piero.neri@hotmail.fr">piero.neri@hotmail.fr</a>
+            </p>
+            <p  class="cell-content__text --smallt">
+              - GitHub : <a href="https://github.com/PieroNr">PieroNr</a>
+            </p>
+          </div>
+          
           
       </div>
     </figure>
@@ -136,6 +150,7 @@
   </div>
 </div>
 </div>
+</horizontal-scroll>
 </template>
 
 <script>
@@ -144,6 +159,8 @@ import loading from "../components/loading.vue";
 import cursorMouse from "../components/cursorMouse.vue";
 import $ from "jquery";
 import { TweenLite, TweenMax, Power1, Power2 } from "gsap";
+import HorizontalScroll from 'vue-horizontal-scroll'
+import 'vue-horizontal-scroll/dist/vue-horizontal-scroll.css';
 export default {
   name: "IndexPage",
   transition: "page",
@@ -152,10 +169,17 @@ export default {
       isLoading: sessionStorage.getItem("loading"),
     };
   },
+  beforeCreate: function() {
+        document.body.className = 'homeBody';
+  },
+  destroyed () {
+    document.body.classList.remove('homeBody')
+  },
   components: {
     menuToggle,
     loading,
     cursorMouse,
+    HorizontalScroll
   },
 
   mounted() {
@@ -165,6 +189,19 @@ export default {
         this.isLoading = "false";
       }, 3000);
     }
+
+    const imgEye = document.getElementById('eye');
+    imgEye.parentNode.addEventListener("mouseenter", function( event ) {
+      imgEye.src="_nuxt/assets/svg/min/eye_closed.svg";  
+    });
+    imgEye.parentNode.addEventListener("mouseleave", function( event ) {
+      imgEye.src="_nuxt/assets/svg/min/yeux.svg";
+    });
+
+
+    
+    
+    
     TweenMax.to(".--light", 0.7, {
       y: "-=20px",
       yoyo: true,
@@ -206,6 +243,8 @@ export default {
       yoyo: true,
     });
   },
+  
+  
 };
 </script>
 

@@ -1,13 +1,16 @@
 <template>
   <div>
       <nav id="nav-main" class="skew">
+        <NuxtLink class="nav-link-home" to="/">
+            <img class="nav-link-home__img" src="../assets/img/logo.webp" />
+        </NuxtLink>
         <section>
-        <NuxtLink class="nav-link" to="/projects">PROJECTS</NuxtLink>
-        <NuxtLink class="nav-link" to="/skills">SKILLS</NuxtLink>
-        <NuxtLink class="nav-link" to="/about">ABOUT ME</NuxtLink>
+            <NuxtLink class="nav-link" to="/projects">PROJECTS</NuxtLink>
+            <NuxtLink class="nav-link" to="/skills">SKILLS</NuxtLink>
+            <NuxtLink class="nav-link" to="/about">ABOUT ME</NuxtLink>
         </section>
       </nav>
-    <button id="menu-button" class="menu-button" style="mix-blend-mode: exclusion">
+    <button id="menu-button" class="menu-button">
     <div class="menu-bars" id="menuBox">
         <div class="bar1"></div>
         <div class="bar2"></div>
@@ -43,21 +46,18 @@
         window.matchMedia("(max-width: 580px)")
         ]
 
-        const random = Math.floor(Math.random() * colorPalet.length);
-        navMain.style.backgroundColor = colorPalet[random];
-
         function mediaqueryresponse(mql){
             if (mqls[0].matches){
                 menuAnimation
-                .to(navMain, 0.8, {width: '100vw', className : "vertical", transform: "translate3d(0,0,0)"},0);
+                .to(navMain, 0.8, {width: '100vw', ease: Power2.easeInOut, transform: "translate3d(0,0,0)", "clip-path": "polygon(0 0, 100% 0, 100% 100%, 0 100%)"},0)
             }
             if (mqls[1].matches){
                 menuAnimation
-                .to(navMain, 0.8, {width: '100vw', className : "vertical", transform: "translate3d(0,0,0)"},0);
+                .to(navMain, 0.8, {width: '100vw', ease: Power2.easeInOut, transform: "translate3d(0,0,0)", "clip-path": "polygon(0 0, 100% 0, 100% 100%, 0 100%)"},0)
             }
             if (mqls[2].matches){
                 menuAnimation
-                .to(navMain, 0.8, {width: '100vw', className : "vertical", transform: "translate3d(0,0,0)"},0);
+                .to(navMain, 0.8, {width: '100vw', ease: Power2.easeInOut, transform: "translate3d(0,0,0)", "clip-path": "polygon(0 0, 100% 0, 100% 100%, 0 100%)"},0)
             }
         }
 
@@ -67,14 +67,15 @@
         }
 
         menuAnimationBack
-        .to(navMain, 0.55, {width: 0, className : "skewback", transform: "translate3d(0,0,0)"},0);
+        .to(navMain, 0.55, {width: 0, ease: Power4.easeIn, transform: "translate3d(0,0,0)"},0)
+        .to(navMain, 1.4, {ease: Power2.easeInOut, "clip-path": "polygon(0 0, -100% 0, 100% 100%, 0 100%)"},0)
         
         menuButton.onclick = function() {
-            if(navMain.classList.contains('skewback')){
+            
+            if(toggle){
                 const random = Math.floor(Math.random() * colorPalet.length);
                 navMain.style.backgroundColor = colorPalet[random];
             }
-
             toggle = !toggle;
             toggle === false ? menuAnimation.play(0) : menuAnimationBack.play(0);
         };

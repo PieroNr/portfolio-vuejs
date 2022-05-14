@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
     "build": "nuxt build",
-    "start": "nuxt start",
+    "dev": "nuxt",
+    "dev:host": "nuxt --hostname 0.0.0.0 --port 3000",
     "generate": "nuxt generate",
-    "dev:host": "nuxt --hostname 0.0.0.0 --port 3000"
+    "start": "nuxt start"
   },
   "dependencies": {
     "@types/greensock": "^1.15.32",
@@ -16,11 +16,13 @@
     "jquery": "^3.6.0",
     "nuxt": "^2.15.8",
     "vue": "^2.6.14",
+    "vue-horizontal-scroll": "^0.2.4",
     "vue-server-renderer": "^2.6.14",
     "vue-template-compiler": "^2.6.14",
     "webpack": "^4.46.0"
   },
   "devDependencies": {
+    "@vue/cli-plugin-babel": "~5.0.0",
     "sass": "^1.49.9",
     "sass-loader": "^10.2.1"
   }

@@ -9,12 +9,9 @@
         border: 0.4vw solid black;
         border-right: none;
         position: absolute;
-        padding-top: 20px;
-        padding-right: 50px;
-        padding-bottom: 20px;
-        padding-left: 20px;
+        padding: 20px 50px 20px 20px;
         top: clamp(2.9375rem, 2.5284rem + 2.1818vw, 5.9375rem);
-        right: 0px;
+        right: 0;
         z-index: 1;
 
         
@@ -57,6 +54,7 @@
         text-align: center;
         margin: 3vw auto;
         padding: 2vw;
+        padding-top: 0;
         width: 70%;
         overflow: hidden;
         .content{
@@ -155,7 +153,8 @@
     .about{
         &:before{
             border: 0.8vw solid black;
-   
+            border-right: none;  
+            padding: 10px 30px 10px 10px;
         }
         .about-content{
             background-size: 40%; 

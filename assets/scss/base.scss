@@ -2,11 +2,15 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 body {
   padding: 2vw;
   font-weight: 700;
+  overflow-x: scroll;
+  
 }
 
 a {
@@ -46,7 +50,7 @@ ul {
   src: url(../fonts/Komika-hand/komika_hand.ttf), format("truetype");
 }
 
-/*.page-leave-active {
+.page-leave-active {
     animation: translate-up .5s ease-in-out;
 }
 
@@ -61,7 +65,7 @@ ul {
     100% {
       transform: translate(0,-105%);
     }
-  } */
+  }
 
 /*.page-enter-active,
     .page-leave-active {
