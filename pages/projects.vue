@@ -9,9 +9,7 @@
     <div class="projects-content">
     <div class="blue projects-content__firstSlide">
       
-      <p class="firstSlide__text">Etre polyvalent est une force dans le domaine du web, par exemple pour faire face 
-        aux divers imprévus dans une équipe. Aussi compétent côté front-end et back-end avec une légère touche de création. 
-        Devman est le couteau suisse des développeur !</p>
+      <p class="firstSlide__text">Being versatile is a strength in the field of the web, for example to cope with the various unexpected in a team. Also competent front-end and back-end with a slight touch of creation. The fullstack developer is the multitasker of developers!</p>
       <div class="firstSlide__img">
         <img src="../assets/svg/min/Homme.svg" alt="">
       </div>
@@ -51,8 +49,8 @@
 
               <div class="slide-container-row-img">
 
-                <img src="../assets/img/projects/Hangover-1.png" alt="">
-                <img src="../assets/img/projects/Hangover-2.png" alt="">
+                <img src="../assets/img/projects/Hangover-1.webp" alt="">
+                <img src="../assets/img/projects/Hangover-2.webp" alt="">
                 
 
               </div>
@@ -86,7 +84,7 @@
 
               <div class="slide-container-row-img">
 
-                <img src="../assets/img/projects/Piloti.png" alt="">
+                <img src="../assets/img/projects/Piloti.webp" alt="">
                 
                 
 
@@ -123,7 +121,7 @@
 
               <div class="slide-container-row-img">
 
-                <img src="../assets/img/projects/Webresponsable-1.png" alt="">
+                <img src="../assets/img/projects/Webresponsable-1.webp" alt="">
                 
                 
                 
@@ -162,7 +160,7 @@
 
               <div class="slide-container-row-img">
 
-                <img src="../assets/img/projects/Aptoband.png" alt="">
+                <img src="../assets/img/projects/Aptoband.webp" alt="">
                 
                 
                 
@@ -198,7 +196,7 @@
 
               <div class="slide-container-row-img">
 
-                <img src="../assets/img/projects/Musee.png" alt="">
+                <img src="../assets/img/projects/Musee.webp" alt="">
                 
                 
                 
@@ -232,8 +230,8 @@
 
               <div class="slide-container-row-img">
 
-                <img src="../assets/img/projects/Instagram.png" alt="">
-                <img src="../assets/img/projects/Instagram-2.png" alt="">
+                <img src="../assets/img/projects/Instagram.webp" alt="">
+                <img src="../assets/img/projects/Instagram-2.webp" alt="">
                 
                 
                 
