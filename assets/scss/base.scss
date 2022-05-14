@@ -10,7 +10,6 @@ body {
   padding: 2vw;
   font-weight: 700;
   overflow-x: scroll;
-  
 }
 
 a {
@@ -51,21 +50,21 @@ ul {
 }
 
 .page-leave-active {
-    animation: translate-up .5s ease-in-out;
+  animation: translate-up 0.5s ease-in-out;
 }
 
-.page-enter-active{
-    animation: translate-up .5s  reverse;
+.page-enter-active {
+  animation: translate-up 0.5s reverse;
 }
 
 @keyframes translate-up {
-    0% {
-      transform: translate(0,0);
-    }
-    100% {
-      transform: translate(0,-105%);
-    }
+  0% {
+    transform: translate(0, 0);
   }
+  100% {
+    transform: translate(0, -105%);
+  }
+}
 
 /*.page-enter-active,
     .page-leave-active {

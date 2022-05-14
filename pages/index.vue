@@ -159,8 +159,8 @@ import loading from "../components/loading.vue";
 import cursorMouse from "../components/cursorMouse.vue";
 import $ from "jquery";
 import { TweenLite, TweenMax, Power1, Power2 } from "gsap";
-import HorizontalScroll from 'vue-horizontal-scroll'
-import 'vue-horizontal-scroll/dist/vue-horizontal-scroll.css';
+import HorizontalScroll from "vue-horizontal-scroll";
+import "vue-horizontal-scroll/dist/vue-horizontal-scroll.css";
 export default {
   name: "IndexPage",
   transition: "page",
@@ -169,17 +169,17 @@ export default {
       isLoading: sessionStorage.getItem("loading"),
     };
   },
-  beforeCreate: function() {
-        document.body.className = 'homeBody';
+  beforeCreate: function () {
+    document.body.className = "homeBody";
   },
-  destroyed () {
-    document.body.classList.remove('homeBody')
+  destroyed() {
+    document.body.classList.remove("homeBody");
   },
   components: {
     menuToggle,
     loading,
     cursorMouse,
-    HorizontalScroll
+    HorizontalScroll,
   },
 
   mounted() {
@@ -190,18 +190,14 @@ export default {
       }, 3000);
     }
 
-    const imgEye = document.getElementById('eye');
-    imgEye.parentNode.addEventListener("mouseenter", function( event ) {
-      imgEye.src="_nuxt/assets/svg/min/eye_closed.svg";  
+    const imgEye = document.getElementById("eye");
+    imgEye.parentNode.addEventListener("mouseenter", function (event) {
+      imgEye.src = "_nuxt/assets/svg/min/eye_closed.svg";
     });
-    imgEye.parentNode.addEventListener("mouseleave", function( event ) {
-      imgEye.src="_nuxt/assets/svg/min/yeux.svg";
+    imgEye.parentNode.addEventListener("mouseleave", function (event) {
+      imgEye.src = "_nuxt/assets/svg/min/yeux.svg";
     });
 
-
-    
-    
-    
     TweenMax.to(".--light", 0.7, {
       y: "-=20px",
       yoyo: true,
@@ -243,8 +239,6 @@ export default {
       yoyo: true,
     });
   },
-  
-  
 };
 </script>
 
