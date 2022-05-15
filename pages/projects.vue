@@ -255,37 +255,37 @@
 </template>
 
 <script>
-  import menuToggle from '../components/menu-toggle.vue'
-  import cursorMouse from "../components/cursorMouse.vue";
-  import loading from "../components/loading.vue";
-  import gsap from "gsap";
-  import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-  import { ScrollTrigger } from "gsap/ScrollTrigger";
-  import { Draggable } from 'gsap/all';
+import menuToggle from "../components/menu-toggle.vue";
+import cursorMouse from "../components/cursorMouse.vue";
+import loading from "../components/loading.vue";
+import gsap from "gsap";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Draggable } from "gsap/all";
 
-  export default {
-    name: "ProjectPage",
-    transition: "page",
-    data() {
-      return {
-        isLoading: sessionStorage.getItem("loading"),
-      };
-    },
-    components: {
-        menuToggle,
-        cursorMouse,
-        loading
-    },
-    mounted(){
-      if (this.isLoading != "false" || this.isLoading == undefined) {
-        setTimeout(() => {
-          sessionStorage.setItem("loading", false);
-          this.isLoading = "false";
-        }, 3000);
-      }
-      
-      this.scrollAnimation();
-    },
+export default {
+  name: "ProjectPage",
+  transition: "page",
+  data() {
+    return {
+      isLoading: sessionStorage.getItem("loading"),
+    };
+  },
+  components: {
+    menuToggle,
+    cursorMouse,
+    loading,
+  },
+  mounted() {
+    if (this.isLoading != "false" || this.isLoading == undefined) {
+      setTimeout(() => {
+        sessionStorage.setItem("loading", false);
+        this.isLoading = "false";
+      }, 3000);
+    }
+
+    this.scrollAnimation();
+  },
   methods: {
     scrollAnimation() {
       gsap.registerPlugin(ScrollToPlugin, ScrollTrigger, Draggable);
@@ -294,14 +294,16 @@
       let panelsdiv = document.querySelector("#panels"),
         panelsContainer = document.querySelector("#panels-container"),
         tween;
-      let elements = gsap.utils.toArray(document.querySelectorAll(".slide > *"));
+      let elements = gsap.utils.toArray(
+        document.querySelectorAll(".slide > *")
+      );
       const panels = gsap.utils.toArray("#panels-container .slide");
 
       /* Panels */
       ScrollTrigger.matchMedia({
-        "(min-width: 1300px)": function() {
-            tween = gsap.to(panels, {
-            xPercent: -100 * ( panels.length - 1 ),
+        "(min-width: 1300px)": function () {
+          tween = gsap.to(panels, {
+            xPercent: -100 * (panels.length - 1),
             ease: "none",
             scrollTrigger: {
               scroller: ".projects-content",
@@ -312,15 +314,15 @@
               snap: {
                 snapTo: 1 / (panels.length - 1),
                 inertia: false,
-                duration: {min: 0.1, max: 0.1}
+                duration: { min: 0.1, max: 0.1 },
               },
-              end: () =>  "+=" + (panelsContainer.offsetWidth - innerWidth)
-            }
+              end: () => "+=" + (panelsContainer.offsetWidth - innerWidth),
+            },
           });
-          },
-        "(max-width: 1299px)": function() {
-            tween = gsap.to(panels, {
-            yPercent: -100 * ( panels.length - 1 ),
+        },
+        "(max-width: 1299px)": function () {
+          tween = gsap.to(panels, {
+            yPercent: -100 * (panels.length - 1),
             ease: "none",
             scrollTrigger: {
               scroller: ".projects-content",
@@ -331,16 +333,14 @@
               snap: {
                 snapTo: 1 / (panels.length - 1),
                 inertia: false,
-                duration: {min: 0.1, max: 0.1}
+                duration: { min: 0.1, max: 0.1 },
               },
-              end: () =>  "+=" + (panelsContainer.offsetHeight - innerHeight)
-            }
+              end: () => "+=" + (panelsContainer.offsetHeight - innerHeight),
+            },
           });
-          }
-      }); 
+        },
+      });
     },
-  }
-  };
-
+  },
+};
 </script>
-
