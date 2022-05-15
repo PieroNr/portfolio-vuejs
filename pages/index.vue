@@ -190,13 +190,13 @@ export default {
       }, 3000);
     }
 
-    const imgEye = document.getElementById('eye');
+    /* const imgEye = document.getElementById('eye');
     imgEye.parentNode.addEventListener("mouseenter", function( event ) {
       imgEye.src="_nuxt/assets/svg/min/eye_closed.svg";  
     });
     imgEye.parentNode.addEventListener("mouseleave", function( event ) {
       imgEye.src="_nuxt/assets/svg/min/yeux.svg";
-    });
+    }); */
 
 
     
@@ -248,6 +248,3 @@ export default {
 };
 </script>
 
-<style>
-@import "../assets/css/main.css";
-</style>

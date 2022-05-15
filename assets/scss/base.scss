@@ -1,3 +1,42 @@
+/* @font-face {
+  font-family: "Bangers";
+  src: url('~/assets/fonts/Bangers/bangers-regular-webfont.woff2') format("woff2");
+  src: url('~/assets/fonts/Bangers/bangers-regular-webfont.woff') format("woff");
+  src: url('~/assets/fonts/Bangers/Bangers-Regular.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: "Komika Hand";
+  src: url('~/assets/fonts/Komika-hand/komika_hand.woff2'), format("woff2");
+  src: url('~/assets/fonts/Komika-hand/komika_hand.woff'), format("woff");
+  src: url('~/assets/fonts/Komika-hand/komika_hand.ttf'), format("truetype");
+} */
+
+@font-face {
+  font-family: 'Bangers';
+  src: url('~/assets/fonts/Bangers/Bangers-Regular.eot');
+  src: url('~/assets/fonts/Bangers/Bangers-Regular.eot?#iefix') format('embedded-opentype'),
+      url('~/assets/fonts/Bangers/Bangers-Regular.woff2') format('woff2'),
+      url('~/assets/fonts/Bangers/Bangers-Regular.woff') format('woff'),
+      url('~/assets/fonts/Bangers/Bangers-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Komika Hand';
+  src: url('~/assets/fonts/Komika-hand/KomikaHand.eot');
+  src: url('~/assets/fonts/Komika-hand/KomikaHand.eot?#iefix') format('embedded-opentype'),
+      url('~/assets/fonts/Komika-hand/KomikaHand.woff2') format('woff2'),
+      url('~/assets/fonts/Komika-hand/KomikaHand.woff') format('woff'),
+      url('~/assets/fonts/Komika-hand/KomikaHand.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -36,19 +75,7 @@ ul {
   list-style: none;
 }
 
-@font-face {
-  font-family: "Bangers";
-  src: url(../fonts/Bangers/bangers-regular-webfont.woff2), format("woff2");
-  src: url(../fonts/Bangers/bangers-regular-webfont.woff), format("woff");
-  src: url(../fonts/Bangers/Bangers-Regular.ttf), format("truetype");
-}
 
-@font-face {
-  font-family: "Komika Hand";
-  src: url(../fonts/Komika-hand/komika_hand.woff2), format("woff2");
-  src: url(../fonts/Komika-hand/komika_hand.woff), format("woff");
-  src: url(../fonts/Komika-hand/komika_hand.ttf), format("truetype");
-}
 
 .page-leave-active {
     animation: translate-up .5s ease-in-out;

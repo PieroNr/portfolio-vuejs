@@ -2,7 +2,7 @@
   <div>
       <nav id="nav-main" class="skew">
         <NuxtLink class="nav-link-home" to="/">
-            <img class="nav-link-home__img" src="../assets/img/logo.webp" />
+            <img class="nav-link-home__img" src="../assets/img/Logo.webp" />
         </NuxtLink>
         <section>
             <NuxtLink class="nav-link" to="/projects">PROJECTS</NuxtLink>

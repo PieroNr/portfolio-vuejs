@@ -3,9 +3,8 @@ $border_width: 0.4vw;
 $gutter: 0.7vw;
 
 // Font
-$fontTitle : 'Bangers';
-
-$fontTexte : 'Komika Hand', sans-serif;
+$fontTitle : 'Bangers', 'Roboto';
+$fontTexte : 'Komika Hand', 'Comic Sans MS', sans-serif;
 
 $svgPath : "../svg/";
 $svgPathMin : "../svg/min/";

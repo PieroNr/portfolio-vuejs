@@ -1,5 +1,8 @@
 .homeBody {
   padding: 2vw 0vw 2vw 2vw;
+  @media (max-width: 1024px) {
+    padding: 2vw;
+  }
 }
 ::-webkit-scrollbar {
   display: none;
@@ -947,3 +950,5 @@ p{
     }
   }
 }
+
+

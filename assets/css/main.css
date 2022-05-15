@@ -1,4 +1,33 @@
 @charset "UTF-8";
+/* @font-face {
+  font-family: "Bangers";
+  src: url('~/assets/fonts/Bangers/bangers-regular-webfont.woff2') format("woff2");
+  src: url('~/assets/fonts/Bangers/bangers-regular-webfont.woff') format("woff");
+  src: url('~/assets/fonts/Bangers/Bangers-Regular.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: "Komika Hand";
+  src: url('~/assets/fonts/Komika-hand/komika_hand.woff2'), format("woff2");
+  src: url('~/assets/fonts/Komika-hand/komika_hand.woff'), format("woff");
+  src: url('~/assets/fonts/Komika-hand/komika_hand.ttf'), format("truetype");
+} */
+@font-face {
+  font-family: "Bangers";
+  src: url("~/assets/fonts/Bangers/Bangers-Regular.eot");
+  src: url("~/assets/fonts/Bangers/Bangers-Regular.eot?#iefix") format("embedded-opentype"), url("~/assets/fonts/Bangers/Bangers-Regular.woff2") format("woff2"), url("~/assets/fonts/Bangers/Bangers-Regular.woff") format("woff"), url("~/assets/fonts/Bangers/Bangers-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Komika Hand";
+  src: url("~/assets/fonts/Komika-hand/KomikaHand.eot");
+  src: url("~/assets/fonts/Komika-hand/KomikaHand.eot?#iefix") format("embedded-opentype"), url("~/assets/fonts/Komika-hand/KomikaHand.woff2") format("woff2"), url("~/assets/fonts/Komika-hand/KomikaHand.woff") format("woff"), url("~/assets/fonts/Komika-hand/KomikaHand.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -32,18 +61,6 @@ ul {
   list-style: none;
 }
 
-@font-face {
-  font-family: "Bangers";
-  src: url(../fonts/Bangers/bangers-regular-webfont.woff2), format("woff2");
-  src: url(../fonts/Bangers/bangers-regular-webfont.woff), format("woff");
-  src: url(../fonts/Bangers/Bangers-Regular.ttf), format("truetype");
-}
-@font-face {
-  font-family: "Komika Hand";
-  src: url(../fonts/Komika-hand/komika_hand.woff2), format("woff2");
-  src: url(../fonts/Komika-hand/komika_hand.woff), format("woff");
-  src: url(../fonts/Komika-hand/komika_hand.ttf), format("truetype");
-}
 .page-leave-active {
   -webkit-animation: translate-up 0.5s ease-in-out;
           animation: translate-up 0.5s ease-in-out;
@@ -141,7 +158,7 @@ ul {
   padding-top: 25%;
   display: block;
   background-size: 100% 100%;
-  font-family: "Komika Hand", sans-serif;
+  font-family: "Komika Hand", "Comic Sans MS", sans-serif;
   font-size: 1vw;
   margin-bottom: 20px;
   text-decoration: none;
@@ -180,6 +197,11 @@ ul {
 
 .homeBody {
   padding: 2vw 0vw 2vw 2vw;
+}
+@media (max-width: 1024px) {
+  .homeBody {
+    padding: 2vw;
+  }
 }
 
 ::-webkit-scrollbar {
@@ -566,7 +588,7 @@ p {
   will-change: transform;
 }
 .home-content .home-content-grid figure:nth-child(1) .cell-content__text.--bigt {
-  font-family: "Bangers";
+  font-family: "Bangers", "Roboto";
   text-align: center;
   color: #000000;
   font-weight: lighter;
@@ -614,7 +636,7 @@ p {
 }
 .home-content .home-content-grid figure:nth-child(2) .cell-content__text.--titleFirst span {
   width: 96%;
-  font-family: "Bangers";
+  font-family: "Bangers", "Roboto";
   text-align: center;
   text-shadow: 8px 5px 0px #000000;
   color: #FFFFFF;
@@ -652,7 +674,7 @@ p {
   text-align: center;
 }
 .home-content .home-content-grid figure:nth-child(3) .cell-content__text.--smallt {
-  font-family: "Komika Hand", sans-serif;
+  font-family: "Komika Hand", "Comic Sans MS", sans-serif;
   width: 60%;
   position: absolute;
   top: 47%;
@@ -715,7 +737,7 @@ p {
   cursor: pointer;
 }
 .home-content .home-content-grid figure:nth-child(4) .cell-content__text.--smallt {
-  font-family: "Komika Hand", sans-serif;
+  font-family: "Komika Hand", "Comic Sans MS", sans-serif;
   width: 60%;
   color: white;
   position: absolute;
@@ -780,7 +802,7 @@ p {
 }
 .home-content .home-content-grid figure:nth-child(6) .cell-content-textContent .cell-content__text.--titleSecond span {
   width: 96%;
-  font-family: "Bangers";
+  font-family: "Bangers", "Roboto";
   text-align: left;
   text-shadow: 8px 5px 0px #00000063;
   color: #FFFFFF;
@@ -822,7 +844,7 @@ p {
 }
 .home-content .home-content-grid figure:nth-child(8) .cell-content .cell-content__text.--titleSecond span {
   width: 96%;
-  font-family: "Bangers";
+  font-family: "Bangers", "Roboto";
   text-align: center;
   text-shadow: 8px 5px 0px #ffffff;
   color: #000000;
@@ -866,7 +888,7 @@ p {
 }
 .home-content .home-content-grid figure:nth-child(10) .cell-content__text.--titleThird span {
   width: 96%;
-  font-family: "Bangers";
+  font-family: "Bangers", "Roboto";
   text-align: left;
   color: #FFFFFF;
   text-shadow: 5px 5px 0px #00000063;
@@ -883,7 +905,7 @@ p {
 .home-content .home-content-grid figure:nth-child(10) .cell-content .cell-content-text p {
   color: #FFFFFF;
   margin-left: 2vw;
-  font-family: "Komika Hand", sans-serif;
+  font-family: "Komika Hand", "Comic Sans MS", sans-serif;
   font-size: clamp(0.625rem, -0.0254rem + 1.0163vw, 1.5625rem);
 }
 .home-content .home-content-grid figure:nth-child(10) .cell-content .cell-content-text p a {
@@ -944,7 +966,7 @@ p {
 }
 .home-content .home-content-grid figure:nth-child(12) .cell-content__text.--titleSecond span {
   width: 100%;
-  font-family: "Bangers";
+  font-family: "Bangers", "Roboto";
   text-align: center;
   text-shadow: 8px 5px 0px #00000063;
   color: #FFFFFF;
@@ -972,7 +994,7 @@ p {
           clip-path: polygon(0.4vw 0.4vw, calc(41.5% - 0.4vw) 0.4vw, calc(41.5% - 0.4vw) calc(16% + 0.4vw), calc(100% - 0.4vw) calc(16% + 0.4vw), calc(100% - 0.4vw) calc(100% - 0.4vw), 0.4vw calc(100% - 0.4vw));
 }
 .home-content .home-content-grid figure:nth-child(13) .cell-content__text.--titleSecond {
-  font-family: "Bangers";
+  font-family: "Bangers", "Roboto";
   text-align: left;
   text-shadow: 8px 5px 0px #00000063;
   color: #FFFFFF;
@@ -984,7 +1006,7 @@ p {
   margin: 0;
 }
 .home-content .home-content-grid figure:nth-child(13) .cell-content__text.--smallt {
-  font-family: "Komika Hand", sans-serif;
+  font-family: "Komika Hand", "Comic Sans MS", sans-serif;
   width: 90%;
   position: absolute;
   top: 55%;
@@ -1444,7 +1466,7 @@ p {
 }
 .projects:before {
   content: "Projects";
-  font-family: "Bangers";
+  font-family: "Bangers", "Roboto";
   font-size: clamp(1.875rem, 1.2784rem + 3.1818vw, 6.25rem);
   font-weight: 400;
   background: #FED004;
@@ -1504,7 +1526,7 @@ p {
   text-align: center;
 }
 .projects-content__firstSlide .firstSlide__text {
-  font-family: "Komika Hand", sans-serif;
+  font-family: "Komika Hand", "Comic Sans MS", sans-serif;
   font-size: clamp(0.8125rem, 0.6881rem + 0.6637vw, 1.75rem);
   font-weight: lighter;
   text-align: center;
@@ -1668,13 +1690,13 @@ p {
 }
 .projects-content-content .slide-container-row-text {
   width: 50%;
-  font-family: "Komika Hand", sans-serif;
+  font-family: "Komika Hand", "Comic Sans MS", sans-serif;
   font-size: clamp(0.625rem, -0.0254rem + 1.0163vw, 1.5625rem);
   color: white;
   padding: 2vw;
 }
 .projects-content-content .slide-container-row-text__titleSecond {
-  font-family: "Bangers";
+  font-family: "Bangers", "Roboto";
   font-weight: lighter;
   text-align: left;
   font-size: clamp(1.6875rem, 0.0398rem + 2.5745vw, 4.0625rem);
@@ -1700,7 +1722,7 @@ p {
   gap: 2vw;
 }
 .projects-content-content .slide-container-row-text-link a {
-  font-family: "Bangers";
+  font-family: "Bangers", "Roboto";
   font-weight: 100;
   font-size: clamp(1.25rem, 1.1441rem + 0.8475vw, 2.5rem);
   -webkit-transition: all 0.8s cubic-bezier(0, 0, 0.23, 1);
@@ -1720,7 +1742,7 @@ p {
   background-position: 0;
 }
 .projects-content-content .slide-container-row-text b {
-  font-family: "Bangers";
+  font-family: "Bangers", "Roboto";
   font-size: clamp(1.25rem, 1.1441rem + 0.8475vw, 2.5rem);
   font-weight: 100;
 }
@@ -1790,7 +1812,7 @@ p {
     width: 80%;
   }
   .projects-content .slide-container-row-text__titleSecond {
-    font-family: "Bangers";
+    font-family: "Bangers", "Roboto";
     font-weight: lighter;
     text-align: left;
     font-size: clamp(1.6875rem, 0.0398rem + 2.5745vw, 4.0625rem);
@@ -1827,7 +1849,7 @@ p {
 }
 .skills:before {
   content: "Skills";
-  font-family: "Bangers";
+  font-family: "Bangers", "Roboto";
   font-size: clamp(1.875rem, 1.2784rem + 3.1818vw, 6.25rem);
   font-weight: 400;
   background-color: #FED004;
@@ -1967,7 +1989,7 @@ p {
 }
 .about:before {
   content: "About";
-  font-family: "Bangers";
+  font-family: "Bangers", "Roboto";
   font-size: clamp(1.875rem, 1.2784rem + 3.1818vw, 6.25rem);
   font-weight: 400;
   background: #FED004;
@@ -1996,7 +2018,7 @@ p {
   top: 100px;
 }
 .about-content__bubble .bubble-text {
-  font-family: "Komika Hand", sans-serif;
+  font-family: "Komika Hand", "Comic Sans MS", sans-serif;
   font-size: 70px;
   top: 18%;
   position: absolute;
@@ -2026,7 +2048,7 @@ p {
   position: relative;
 }
 .about-content__content .content-text p {
-  font-family: "Komika Hand", sans-serif;
+  font-family: "Komika Hand", "Comic Sans MS", sans-serif;
   margin-top: 2vw;
   font-size: clamp(1.0625rem, 0.8883rem + 0.9292vw, 2.375rem);
   text-shadow: 1px 1px 0px #ffffff;
@@ -2039,7 +2061,7 @@ p {
 }
 .about-content__content .content-links a {
   margin: 0 1vw;
-  font-family: "Bangers";
+  font-family: "Bangers", "Roboto";
   font-weight: 100;
   font-size: clamp(1.25rem, 1.1441rem + 0.8475vw, 2.5rem);
   -webkit-transition: all 0.8s cubic-bezier(0, 0, 0.23, 1);
@@ -2140,7 +2162,7 @@ p {
       -ms-flex-pack: center;
           justify-content: center;
   height: 100%;
-  font-family: "Bangers";
+  font-family: "Bangers", "Roboto";
   text-align: center;
   font-weight: 400;
   margin: auto;
