@@ -13,29 +13,30 @@
 } */
 
 @font-face {
-  font-family: 'Bangers';
-  src: url('~/assets/fonts/Bangers/Bangers-Regular.eot');
-  src: url('~/assets/fonts/Bangers/Bangers-Regular.eot?#iefix') format('embedded-opentype'),
-      url('~/assets/fonts/Bangers/Bangers-Regular.woff2') format('woff2'),
-      url('~/assets/fonts/Bangers/Bangers-Regular.woff') format('woff'),
-      url('~/assets/fonts/Bangers/Bangers-Regular.ttf') format('truetype');
+  font-family: "Bangers";
+  src: url("~/assets/fonts/Bangers/Bangers-Regular.eot");
+  src: url("~/assets/fonts/Bangers/Bangers-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("~/assets/fonts/Bangers/Bangers-Regular.woff2") format("woff2"),
+    url("~/assets/fonts/Bangers/Bangers-Regular.woff") format("woff"),
+    url("~/assets/fonts/Bangers/Bangers-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Komika Hand';
-  src: url('~/assets/fonts/Komika-hand/KomikaHand.eot');
-  src: url('~/assets/fonts/Komika-hand/KomikaHand.eot?#iefix') format('embedded-opentype'),
-      url('~/assets/fonts/Komika-hand/KomikaHand.woff2') format('woff2'),
-      url('~/assets/fonts/Komika-hand/KomikaHand.woff') format('woff'),
-      url('~/assets/fonts/Komika-hand/KomikaHand.ttf') format('truetype');
+  font-family: "Komika Hand";
+  src: url("~/assets/fonts/Komika-hand/KomikaHand.eot");
+  src: url("~/assets/fonts/Komika-hand/KomikaHand.eot?#iefix")
+      format("embedded-opentype"),
+    url("~/assets/fonts/Komika-hand/KomikaHand.woff2") format("woff2"),
+    url("~/assets/fonts/Komika-hand/KomikaHand.woff") format("woff"),
+    url("~/assets/fonts/Komika-hand/KomikaHand.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
-
 
 * {
   box-sizing: border-box;
@@ -49,7 +50,6 @@ body {
   padding: 2vw;
   font-weight: 700;
   overflow-x: scroll;
-  
 }
 
 a {
@@ -75,24 +75,22 @@ ul {
   list-style: none;
 }
 
-
-
 .page-leave-active {
-    animation: translate-up .5s ease-in-out;
+  animation: translate-up 0.5s ease-in-out;
 }
 
-.page-enter-active{
-    animation: translate-up .5s  reverse;
+.page-enter-active {
+  animation: translate-up 0.5s reverse;
 }
 
 @keyframes translate-up {
-    0% {
-      transform: translate(0,0);
-    }
-    100% {
-      transform: translate(0,-105%);
-    }
+  0% {
+    transform: translate(0, 0);
   }
+  100% {
+    transform: translate(0, -105%);
+  }
+}
 
 /*.page-enter-active,
     .page-leave-active {

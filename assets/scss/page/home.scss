@@ -7,7 +7,7 @@
 ::-webkit-scrollbar {
   display: none;
 }
-p{
+p {
   white-space: normal;
 }
 .black-overlay {
@@ -19,7 +19,6 @@ p{
   left: 0;
   background-color: #000000;
   display: none;
-  
 }
 .home-content {
   height: calc(100vh - 4vw);
@@ -28,7 +27,6 @@ p{
   overflow-y: hidden;
 
   .home-content-grid {
-
     position: relative;
     display: grid;
     height: 100%;
@@ -36,7 +34,6 @@ p{
     grid-template-columns: 1.6fr 1fr 0.33fr 0.6fr 0.03fr 0.08fr 1fr 0.12fr 0.33fr 0.33fr 0.33fr 0.8fr;
     grid-template-rows: 0.6fr 0.5fr 1.2fr 0.1fr 0.3fr 0.6fr;
     grid-gap: $gutter;
-    
 
     figure {
       overflow: hidden;
@@ -411,7 +408,6 @@ p{
 
           &__text {
             &.--titleThird {
-              
               span {
                 width: 96%;
                 font-family: $fontTitle;
@@ -425,13 +421,11 @@ p{
                 font-size: 38px;
                 line-height: 2vw;
               }
-              
             }
-            
           }
-          .cell-content-text{
+          .cell-content-text {
             margin-top: 2vw;
-            p{
+            p {
               color: $white;
               margin-left: 2vw;
               font-family: $fontTexte;
@@ -441,10 +435,7 @@ p{
                 text-decoration: underline;
               }
             }
-
           }
-
-          
         }
       }
 
@@ -711,11 +702,11 @@ p{
             margin-top: 4vw !important;
             p {
               font-size: clamp(
-                  0.9375rem,
-                  0.3808rem + 1.1628vw,
-                  1.125rem
-                ) !important;
-                margin-top: 2vw;
+                0.9375rem,
+                0.3808rem + 1.1628vw,
+                1.125rem
+              ) !important;
+              margin-top: 2vw;
             }
           }
         }
@@ -891,11 +882,11 @@ p{
             margin-top: 8vw !important;
             p {
               font-size: clamp(
-                  0.5625rem,
-                  0.2802rem + 1.5054vw,
-                  1rem
-                ) !important;
-                margin-top: 2vw;
+                0.5625rem,
+                0.2802rem + 1.5054vw,
+                1rem
+              ) !important;
+              margin-top: 2vw;
             }
           }
         }
@@ -950,5 +941,3 @@ p{
     }
   }
 }
-
-

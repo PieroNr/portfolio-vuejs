@@ -13,34 +13,32 @@
 </template>
 
 <script>
-  import menuToggle from '../components/menu-toggle.vue'
-  import SkillsWheel from '../components/skills-wheel.vue'
-  import cursorMouse from "../components/cursorMouse.vue";
-  import loading from "../components/loading.vue";
-  export default {
-    name: "SkillsPage",
-    transition: "page",
-    data() {
-      return {
-        isLoading: sessionStorage.getItem("loading"),
-      };
-    },
-    components: {
-        menuToggle,
-        SkillsWheel,
-        cursorMouse,
-        loading
+import menuToggle from "../components/menu-toggle.vue";
+import SkillsWheel from "../components/skills-wheel.vue";
+import cursorMouse from "../components/cursorMouse.vue";
+import loading from "../components/loading.vue";
+export default {
+  name: "SkillsPage",
+  transition: "page",
+  data() {
+    return {
+      isLoading: sessionStorage.getItem("loading"),
+    };
+  },
+  components: {
+    menuToggle,
+    SkillsWheel,
+    cursorMouse,
+    loading,
+  },
 
-    },
-
-    mounted() {
-      if (this.isLoading != "false" || this.isLoading == undefined) {
+  mounted() {
+    if (this.isLoading != "false" || this.isLoading == undefined) {
       setTimeout(() => {
         sessionStorage.setItem("loading", false);
         this.isLoading = "false";
       }, 3000);
     }
-    }
-  };
+  },
+};
 </script>
-
